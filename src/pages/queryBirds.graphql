@@ -1,0 +1,11 @@
+     query {
+        birds {
+            data {
+            id
+            attributes {
+                breed
+                country
+            }
+            }  
+        }
+    }
