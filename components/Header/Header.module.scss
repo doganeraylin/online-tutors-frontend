@@ -1,0 +1,49 @@
+@use '/styles/variables.module.scss' as *;
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px 10px 10px;
+    background-color: $green;
+
+}
+
+.navbarContainer {
+  display: none;
+}
+
+.logoTextContainer {
+    font-family: $shrikhand;
+    color: $light-yellow;
+} 
+
+.logoImgContainer {
+    position: relative;
+        .logoImg {
+            max-width: 8rem;
+        }
+}
+
+.logoTextContainer {
+    position: absolute;
+    color: $green;
+    top: 2.7rem;
+    left: 2.2rem;
+}
+
+.loginBtn {
+    padding: 0.5rem;
+    border-radius: 2rem;
+    border: 1px solid black;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: $light-yellow;
+    color: $green;
+}
+
+
+
+
+
+
