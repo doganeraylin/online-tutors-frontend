@@ -1,0 +1,49 @@
+@use '../../styles/variables.module.scss' as *;
+
+
+
+.whyContainer,
+.singleColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $light-yellow;
+    border: 2px solid magenta;
+}
+
+.singleColumn {
+    font-family: $josefin;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.singleColumn img {
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.singleColumnDescription {
+    max-width: 250px;
+    padding: 1rem 1.5rem;
+    margin: 1rem 1.5rem;
+    border-radius: 1rem;
+    background-color: $brownish-red;
+    color: $light-yellow;
+    font-weight: 200;
+    line-height: 1.2rem;
+}
+
+.whyTitle {
+    font-family: $shrikhand;
+    color: $brownish-red;
+    text-align: center;
+    margin: 4rem 0 3rem;
+}
+
+
+@media only screen and (min-width: 875px) {
+    .whyColumns {
+        display: flex;
+    }
+}
+
