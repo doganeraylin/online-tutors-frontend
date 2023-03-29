@@ -125,12 +125,14 @@ gsap.registerPlugin(ScrollTrigger);
  import Header from '../../components/Header/Header'
  import Hero from "../../components/Hero/Hero"
  import WhyPlayfulMinds from "../../components/WhyPlayfulMinds/WhyPlayfulMinds"
+ import HowItWorks from "../../components/HowItWorks/HowItWorks"
 export default function example () {
   return (
     <>
     <Header />
     <Hero />
-    <WhyPlayfulMinds />
+    {/* <WhyPlayfulMinds />
+    <HowItWorks /> */}
     </>
   
   )
