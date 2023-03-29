@@ -1,0 +1,91 @@
+
+
+.loginBtn {
+    padding: 0.2rem 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid black;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--light-yellow,);
+    color: var(--green);
+    }
+
+.navbarContainer {
+    background-color: var(--green);
+    border: 2px solid yellow;
+    display: flex;
+    justify-content: center !important;
+}
+
+.navbarToggler,
+.navbarToggler:focus,
+.navbarToggler:active,
+.navbarToggleIcon:focus {
+    background-color: var(--light-yellow);
+    outline: none;
+    box-shadow: none;
+    border: 2px solid var(--light-yellow);
+}
+
+/*  */
+
+.navbar {
+    width: 100%;
+    border: 1px solid magenta;
+}
+
+.navbarLogo {
+    border: 2px solid blue;
+}
+
+
+.navLinks {
+    min-width: 460px;
+    border: 2px solid black;
+    padding: 0 3rem;
+    
+}
+.navLinks a {
+    color: var(--light-yellow);
+    font-family: var(--josefin);
+    font-size: 1.25rem;
+}
+.dotImg {
+    max-width: 5px;
+}
+.btnContainer {
+    border: 1px solid magenta;
+}
+.logoContainer {
+    border: 1px solid orange;
+}
+/*  */
+
+@media (min-width: 768px){
+    .navbarLogo {
+        max-width: 15%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .navLinks a {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .navLinks a {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .loginBtn {
+        padding: 0.5rem  2rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .navLinks a {
+        font-size: 2.5rem;
+    }
+}
