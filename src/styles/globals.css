@@ -1,0 +1,17 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,700;1,300&display=swap');
+
+:root {
+    --green: #3EA66B;
+    --light-yellow: #FDFAD3;
+    --lightest-yellow: #FFFBEE;
+    --brownish-red: #BD4C25;
+    --sky-blue: #A6E1D8;
+    --white: #FFFF;
+    --navy-blue: #072A59;
+    
+    --shrikhand: 'Shrikhand', cursive;
+    --josefin: 'Josefin Sans', sans-serif;
+}
+
