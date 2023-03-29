@@ -1,4 +1,5 @@
 .whyContainer {
+    padding-top: 2rem;
     background-color: var(--light-yellow);
 }
 
@@ -29,9 +30,19 @@
 
 /* MEDIA QUERIES */
 
+@media (min-width: 576px) {
+    .whyTitle {
+        font-size: 3rem;
+    }
+}
+
+
 @media (min-width: 1200px) {
     .whyColumns {
         max-width: 80%;
+    }
+    .whyTitle {
+        font-size: 4rem;
     }
 }
 
