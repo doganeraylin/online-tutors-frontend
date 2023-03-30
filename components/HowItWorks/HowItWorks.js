@@ -5,8 +5,8 @@ const HowItWorks = () => {
         <div className={styles.howItWorksWrapper}>
             <div className={styles.howItWorksContainer}>
                 <h1 className={styles.howItWorksContainerTitle}>how it works</h1>
-                <div className={`${styles.stepsContainer} d-flex flex-column align-items-center align-items-lg-center flex-lg-row justify-content-lg-evenly`}>
-                    <div className={`${styles.stepTwo} ${styles.singleStep}`}>
+                <div className={`${styles.stepsContainer} d-flex flex-column  flex-lg-row-reverse align-items-center align-items-lg-center flex-lg-row justify-content-lg-evenly py-5`}>
+                    <div className={`${styles.stepOne} ${styles.singleStep} align-self-lg-start`}>
                         <div className={`${styles.stepBackground} position-relative`} >
                             <div className={`${styles.textContainer} position-absolute top-50 start-50 translate-middle`}>
                                 <h2>Join Our Community</h2>
