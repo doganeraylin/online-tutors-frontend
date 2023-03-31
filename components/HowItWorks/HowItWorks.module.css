@@ -3,6 +3,7 @@
     text-align: center;
 }
 
+
 .singleStep {
     margin: 1rem 0;
 }
@@ -30,13 +31,16 @@
     font-size: 1.5rem;
 }
 .stepsContainer {
-    border: 1px solid yellow;
+   max-width: 95%;
+   margin: 0 auto;
+   padding: 20rem 0; 
+   border: 1px solid yellow;
 }
 
 /* .stepOne {
     margin-top: 2rem;
 } */
-.stepTwo {
+/* .stepTwo {
     margin-top: 4rem;
     border: 2px solid orange;
 }
@@ -44,10 +48,25 @@
 .stepThree {
     margin-top: 20rem;
     border: 2px solid blue;
-}
+} */
 
 @media (min-width: 992px) {
     .howItWorksContainer {
+        background-repeat: no-repeat;
         background-image: url("../../public/assets/howItWorks/wavy-line.png");
     }
 }
+
+@media (min-width: 1290px) {
+    .howItWorksContainer {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url("../../public/assets/howItWorks/wavy-line.png");
+    }
+}
+
+/* @media (min-width: 1360px) {
+    .stepsContainer {
+        max-width: 60%;
+    }
+} */
