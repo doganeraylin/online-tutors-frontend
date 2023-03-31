@@ -5,8 +5,8 @@ const HowItWorks = () => {
         <div className={styles.howItWorksWrapper}>
             <div className={styles.howItWorksContainer}>
                 <h1 className={styles.howItWorksContainerTitle}>how it works</h1>
-                <div className={`${styles.stepsContainer} d-flex flex-column  flex-lg-row-reverse align-items-center align-items-lg-center flex-lg-row justify-content-lg-evenly py-5`}>
-                    <div className={`${styles.stepOne} ${styles.singleStep} align-self-lg-start`}>
+                <div className={`${styles.stepsContainer} position-relative d-flex flex-column  flex-lg-row-reverse align-items-center align-items-lg-center flex-lg-row justify-content-lg-evenly`}>
+                    <div className={`${styles.stepOne} ${styles.singleStep} position-absolute top-0 end-0`}>
                         <div className={`${styles.stepBackground} position-relative`} >
                             <div className={`${styles.textContainer} position-absolute top-50 start-50 translate-middle`}>
                                 <h2>Join Our Community</h2>
@@ -20,7 +20,7 @@ const HowItWorks = () => {
                         </div>
                          
                     </div>
-                    <div className={`${styles.stepTwo} ${styles.singleStep}`}>
+                    <div className={`${styles.stepTwo} ${styles.singleStep} position-absolute top-50 start-50 translate-middle`}>
                         <div className={`${styles.stepBackground} position-relative`}>
                             <img className="w-25 p-2 " src="./assets/howItWorks/step-2-img-1.png"></img>
                             <div className={`${styles.textContainer} position-absolute top-50 start-50 translate-middle mt-4`}>
@@ -29,7 +29,7 @@ const HowItWorks = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={`${styles.stepThree} ${styles.singleStep}`}>
+                    <div className={`${styles.stepThree} ${styles.singleStep} position-absolute bottom-0 start-0`}>
                         <div className={`${styles.stepBackground} position-relative`}>
                             <img class="w-25" src="./assets/howItWorks/step-3-img-1.png"></img>
                             <div  className={`${styles.textContainer} position-absolute top-50 start-50 translate-middle mt-4`}>
