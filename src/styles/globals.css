@@ -10,14 +10,23 @@
     --sky-blue: #A6E1D8;
     --white: #FFFF;
     --navy-blue: #072A59;
+    --about-pg-bg: #BAD0F6;
+    --orange: #FF7134;
+    --light-yellow-text: #FFFBE0;
+    --baby-pink: #FECDDC;
     
     --shrikhand: 'Shrikhand', cursive;
     --josefin: 'Josefin Sans', sans-serif;
+}
+
+html {
+    height: 100%;
 }
 
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: var(--about-pg-bg);
 }
 
