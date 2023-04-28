@@ -5,14 +5,15 @@
 :root {
     --green: #3EA66B;
     --light-yellow: #FDFAD3;
-    --lightest-yellow: #FFFBEE;
+    --light-yellow-title: #FFFBE0;
+    --light-yellow-text: #FFFBEE;
     --brownish-red: #BD4C25;
     --sky-blue: #A6E1D8;
     --white: #FFFF;
     --navy-blue: #072A59;
     --about-pg-bg: #BAD0F6;
     --orange: #FF7134;
-    --light-yellow-text: #FFFBE0;
+  
     --baby-pink: #FECDDC;
     
     --shrikhand: 'Shrikhand', cursive;
