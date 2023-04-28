@@ -5,7 +5,6 @@
 .introContainer {
     max-width: 450px;
     padding: 4rem 2rem 5rem;
-    border: 2px solid blue;
 }
 
 .titleItalic {
@@ -26,37 +25,46 @@
     font-size: 2.5rem;
 }
 
-.storyContainer {
+.storyContainer,
+.summaryContainer {
+    margin: 0 auto;
     color: var(--white);
     max-width: 350px;
     padding: 0 4rem;
     font-size: 1.25rem;
-    border: 2px solid salmon;
 }
 
-.storyContainer p {
+.storyContainer p,
+.summaryContainer p {
     padding: 0.5rem 0;
 }
 
-.featureTitle {
+.featureTitle,
+.featureTitleCentered,
+.ctaText {
     max-width: 350px;
     margin: 0 auto;
     font-size: 4.5rem;
     color: var(--light-yellow-text);
     font-weight: bold;
     line-height: 1.25;
-    border: 2px solid blueviolet;
+}
+
+.featureTitleCentered {
+    max-width: 400px;
+    border: 2px solid magenta;
+    text-align: center;
+    font-size: 3.75rem;
 }
 
 .featureTitleContainer {
     max-width: 420px;
     margin: 0 auto;
     position: relative;
-    /* border: 2px solid magenta; */
 }
 
+
 .featureBoyImg {
-    /* border: 2px solid green; */
     max-width: 100px;
     position: absolute;
     bottom: 55px;
@@ -105,7 +113,6 @@
     left: -20px;
     z-index: 2;  
     transform: rotate(-20deg);  
-    /* border: 2px solid orange; */
 }
 
 .itemTwo img {
@@ -124,7 +131,6 @@
 .itemOne p {
     transform: rotate(-2deg);
     padding: 0.5rem 5.5rem;
-    /* padding: 0.5rem 6rem; */
 }
 
 .itemTwo p {
@@ -148,49 +154,6 @@
     margin: 0 auto;
 }
 
-.singleSubjectContainer {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-}
-
-.singleSubjectContainer img {
-    max-width: 65px;
-}
-
-.subject {
-    background-color: var(--baby-pink);
-    color: var(--lightest-yellow);
-    padding: 0.75rem 4.5rem;
-    font-size: 1.5rem;
-    border-radius: 50px;
-    border: 1px dashed var(--navy-blue);
-    border-style: dashed;
-    margin: 2rem 0;
-    font-weight: bold;
-}
-
-
-.math {
-    align-self: flex-end;
-}
-
-.coding {
-    align-self: center;
-}
-
-.language {
-    align-self: flex-start;
-    padding: 0.75rem 4rem;
-}
-
-.mathImg {
-    position: absolute;
-    bottom: 60px;
-    left: 100px;
-    transform: rotate(-20deg);
-}
-
 .codingImgOne,
 .codingImgTwo {
     position: absolute;
@@ -207,10 +170,111 @@
     bottom: 0px;
 }
 
+/* materials */
+
+.materialsContainer,
+.subjectsContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 325px;
+    margin: 0 auto;
+}
+
+.singleSubjectContainer,
+.singleMaterialContainer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
 
 
+.singleSubjectContainer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.singleSubjectContainer img,
+.singleMaterialContainer img {
+    max-width: 65px;
+}
+
+.subject,
+.material {
+    background-color: var(--baby-pink);
+    color: var(--lightest-yellow);
+    padding: 0.75rem 4.5rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    border: 1px dashed var(--navy-blue);
+    border-style: dashed;
+    margin: 2rem 0;
+    font-weight: bold;
+}
 
 
+.gamesImg {
+    position: absolute;
+    right: 30px;
+    transform: rotate(20deg);
+}
+
+.quizzesImgOne {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+}
+
+.quizzesImgTwo {
+    position: absolute;
+    right: 20px;
+    transform: rotate(120deg);
+}
+
+.ebooksImg {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+}
+
+
+.mathImg {
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    transform: rotate(-20deg);
+}
+
+.codingImgOne {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.codingImgTwo {
+    right: 10px;
+}
+
+.languageImg {
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
+} 
+
+
+/* cta */
+
+.ctaText {
+    max-width: 650px;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid blue;
+}
+
+
+/* media queries */
 @media (min-width: 576px) {
     .titleColored {
         font-size: 4rem;
@@ -229,8 +293,12 @@
         font-size: 6rem;
         max-width: 500px;
     }
+
+    .featureTitleCentered {
+        font-size: 5.5rem;
+        max-width: 550px;
+    }
     .featureBoyImg {
-        /* border: 2px solid green; */
         bottom: 75px;
         right: 50px;
     }
@@ -240,10 +308,15 @@
         font-size: 2.25rem;
         color: var(--light-yellow)
     }
+
+    .ctaText {
+        font-size: 4rem;
+    }
 }
 
  @media (min-width: 768px) {
-    .storyContainer {
+    .storyContainer,
+    .summaryContainer {
         max-width: 450px;
     }
     .featureDescriptionContainer {
@@ -270,6 +343,30 @@
     .itemTwo img {
         bottom: 65px;
     }
+    .language,
+    .games {
+        align-self: flex-end;
+    }
+
+    .ebooks,
+    .math {
+        align-self: flex-start;
+    }
+
+    .gamesImg {
+        right: -10px;
+    }
+    
+    .ebooksImg {
+        top: 60px;
+        left: 5px;
+    }
+
+    .mathImg {
+        left: 5px;
+    }
+    
+
 } 
 
 @media (min-width: 992px) {
@@ -286,11 +383,15 @@
     .featureTitleContainer {
         max-width: 900px;
     }
-    
     .featureTitle {
         font-size: 10rem;
         max-width: 800px;
         line-height: 1.1;
+    }
+
+    .featureTitleCentered {
+        font-size: 8.5rem;
+        max-width: 850px;
     }
     .featureDescriptionContainer {
         max-width: 800px;
@@ -298,38 +399,46 @@
         color: var(--light-yellow);
     }
     .featureBoyImg {
-        /* border: 2px solid green; */
         max-width: 150px;
         bottom: 120px;
         right: 30px;
     }
-
-    .subjectsContainer {
+    .subjectsContainer,
+    .materialsContainer {
         max-width: 500px;
     }
-
-    .singleSubjectContainer img {
+    .singleSubjectContainer img,
+    .singleMaterialContainer img {
         max-width: 75px;
     }
-    .mathImg {
-        left: 250px;
-    }
-    .codingImgOne {
-        left: 100px;
-    }
-    .codingImgTwo {
-        left: 320px;
+
+    .quizzesImgOne {
+        left: 90px;
+        bottom: 10px;
     }
 
+    .codingImgOne {
+        left: 80px;
+    }
     
-.subject {
+    .codingImgTwo {
+      visibility: hidden;
+    }
+    
+    .languageImg {
+        left: 200px;
+    }
+
+    .quizzesImgTwo {
+        right: 90px;
+    }
+    .subject,
+    .material {
     padding: 0.75rem 5.5rem;
     font-size: 1.5rem;
     border-radius: 50px;
     margin: 2rem 0;
-}
-
-    
+    }
 
 }
 
@@ -343,14 +452,17 @@
         font-size: 6rem;
         color: var(--light-yellow);
     }
-    
     .featureTitle {
         font-size: 15rem;
         max-width: 1100px;
         line-height: 1.2;
     }
+
+    .featureTitleCentered {
+        font-size: 12rem;
+        max-width: 1200px;
+    }
     .featureBoyImg {
-        /* border: 2px solid green; */
         max-width: 200px;
         bottom: 180px;
         right: -10px;
