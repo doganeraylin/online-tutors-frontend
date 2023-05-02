@@ -1,18 +1,14 @@
-
-
 .loginBtn {
     padding: 0.2rem 1.5rem;
     border-radius: 2rem;
     border: 1px solid black;
     font-size: 1rem;
     font-weight: 700;
-    background-color: var(--light-yellow,);
+    background-color: var(--light-yellow);
     color: var(--green);
     }
 
 .navbarContainer {
-    background-color: var(--green);
-    border: 2px solid yellow;
     display: flex;
     justify-content: center !important;
 }
