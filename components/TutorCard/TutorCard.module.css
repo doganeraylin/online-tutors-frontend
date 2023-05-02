@@ -1,0 +1,62 @@
+.container {
+    max-width: 325px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem;
+    border-radius: 35px;
+    background-color: var(--white);
+    font-family: var(--josefin);
+}
+.tutorTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.tutorBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0.5rem 0; 
+}
+.tutorName,
+.tutorField{
+    margin: 0;
+    text-transform: capitalize;
+}
+.tutorField {
+    font-style: italic;
+}
+.tutorDescription {
+    margin-top: 0.75rem;
+}
+.tutorImg {
+    max-width: 90px;
+}
+.ratingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.rating {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--gold);
+}
+.ratingIcon {
+    max-width: 25px;
+}
+.tutorReview {
+    text-align: center;
+    align-self: flex-start;
+}
+.reviewCount {
+    padding: 0.5rem 0;
+    opacity: 0.5;
+    font-size: 0.9rem;
+}
+.pricing {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+}
