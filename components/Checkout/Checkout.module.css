@@ -1,0 +1,83 @@
+.checkoutContainer {
+    background-color: var(--light-gray);
+    padding: 1rem 1.5rem;
+    max-width: 310px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.cardInfoContainer,
+.summary {
+    max-width: 300px;
+    margin: 1rem auto;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    background-color: var(--white);
+    font-family: var(--josefin);
+}
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+.inputContainer input {
+    border-radius: 10px;
+    border: 1px solid var(--dark-gray);
+}
+.verificationInput {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.verificationInput input {
+    max-width: 80px;
+    border-radius: 10px;
+    border: 1px solid var(--dark-gray);
+}
+.tutorImg {
+    max-width: 80px;
+}
+.summary {
+    max-width: 300px;
+    margin: 0 auto;
+}
+.summary img {
+    align-self: flex-start;
+}
+.lessonDetailsContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+.lessonPlan, 
+.lessonTime {
+    opacity: 0.5;
+    margin: 0.2rem;
+}
+.pricing,
+.totalContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.pricingTitle {
+    opacity: 0.5;
+}
+.feeContainer {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+.btnContainer {
+    text-align: center;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+    .checkoutContainer {
+        display: flex;
+        max-width: 750px;
+    }
+}
