@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Button from '../Button/Button'
 import styles from './Hero.module.css'
 
 const Hero = () => (
@@ -6,9 +7,20 @@ const Hero = () => (
         <div className={`${styles.heroTextContainer} w-100 me-4`}>
             <h1 className={styles.heroTextTitle}>Playful Learning Adventures</h1>
             <h2 className={styles.heroTextSubtitle}>Transform your child's learning experience with Playful Minds!</h2>
-            <p className={styles.heroTextDescription}>Unlock your child's full potential with our fun and engaging online tutoring program. Our expert tutors provide personalized one-on-one sessions that cater to your child's unique learning style. Whether it's improving grades, developing critical thinking skills, or exploring new subjects, we're here to help. Sign up today and watch your child's mind soar!</p>
+            <p className={styles.heroTextDescription}>Unlock your child's full potential with our <span>fun</span> and  <span>engaging</span> online tutoring program. Our <span>expert tutors</span> provide personalized <span>one-on-one sessions</span> that cater to your child's <span>unique learning style</span>. Sign up today and watch your child's mind soar!</p>
             <div className={styles.heroBtnContainer}>
-                <Link href=""><button type="button" className={styles.heroBtn}>get started</button></Link>
+                <Link href="">
+                    <Button 
+                        content="get started"
+                        buttonColor="orangeBg"
+                        buttonTextColor="whiteText"
+                        buttonSize="largeBtn"
+                        buttonFontSize="largeFont"
+                        height="largeHeight"
+                      
+            
+                    />
+                </Link>
             </div>
         </div>
         <div className={styles.heroImgContainer}>
