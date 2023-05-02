@@ -1,3 +1,4 @@
+import Button from '../Button/Button'
 import styles from "./About.module.css"
 
 const About = () => {
@@ -91,10 +92,18 @@ const About = () => {
                 </div>
                 <div className={`${styles.ctaTextContainer} ${styles.lightYellowTitle}`}>
                     <p className={styles.ctaText}>embark on an exciting learning adventure today!</p>
+                    <div className={styles.btn}>
+                    <Button 
+                        content="sign up"
+                        buttonColor="lightYellowBg"
+                        buttonTextColor="orangeText"
+                        buttonSize="largeBtn"
+                        buttonFontSize="largeFont"
+                        height="largeHeight"
+                        />
+                    </div>
                 </div>
-                <div className={styles.btn}>
-                    <button>sign up</button>
-                </div>
+            
             </div>
         </div>
     )
