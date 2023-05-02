@@ -1,0 +1,19 @@
+.container {
+    max-width: 700px;
+    font-family: var(--josefin);
+    color: var(--light-yellow-text);
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.container span {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .container {
+        font-size: 2rem;
+    }
+}
