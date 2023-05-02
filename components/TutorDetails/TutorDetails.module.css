@@ -1,0 +1,118 @@
+.container {
+    font-family: var(--josefin);
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 1rem;
+}
+.tutorHeaderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.tutorBookingCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    padding: 1rem 0;
+    border-radius: 30px;
+    background-color: var(--white);
+}
+.tutorBookingCard > * {
+    margin: 0.5rem;
+}
+.tutorImg {
+    max-width: 100px;
+}
+.tutorName {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0;
+}
+.tutorField {
+    font-style: italic;
+    font-size: 1.10rem;
+}
+.ratingWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid magenta;
+}
+
+.ratingContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.rating {
+    margin: 0;
+    color: var(--gold);
+}
+.ratingImg {
+    max-width: 20px;
+}
+.lessonCount {
+    opacity: 0.5;
+}
+.skillsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.3rem 0;
+    margin-top: 1rem;
+}
+.skillsContainer p {
+    margin: 0;
+}
+
+.skillTitle {
+    opacity: 0.5;
+}
+.chips {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2rem;
+}
+.chips > * {
+    margin: 0 0.2rem;
+}
+.tabsContainer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.tabBtn {
+    font-size: 1rem;
+    border: none;
+    color: var(--dark-gray);
+    background-color: transparent;
+}
+.tabBtnSelected {
+    border-bottom: 2px solid var(--dark-gray);
+}
+.nextIcon,
+.previousIcon {
+    max-width: 0;
+    max-height: 0;
+}
+
+
+/* media queries */
+
+@media (min-width: 768px) {
+    .ratingImg {
+        max-width: 25px;
+    }
+    .rating {
+        font-size: 1.75rem;
+    }
+    .tabBtn {
+        font-size: 1.25rem;
+    }
+    .skillsContainer p,
+    .skillsContainer p {
+        font-size: 1.25rem;
+    }
+}
