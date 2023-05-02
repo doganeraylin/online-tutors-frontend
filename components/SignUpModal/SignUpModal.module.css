@@ -1,0 +1,15 @@
+.container {
+    max-width: 400px;
+    margin: 2rem auto;
+    border-radius: 20px;
+    background-color: var(--white);
+    text-align: center;
+    font-family: var(--josefin);
+}
+.modalImg {
+    max-width: 100%;
+    margin-top: 1rem;
+}
+.textContainer {
+    padding: 0 1.75rem;
+}
