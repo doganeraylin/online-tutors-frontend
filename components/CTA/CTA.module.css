@@ -1,0 +1,42 @@
+.container {
+    font-family: var(--josefin);
+    color: var(--light-yellow-title);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid brown;
+    padding: 1.5rem;
+}
+
+.ctaText {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.ctaText span {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+    .ctaText {
+        font-size: 4rem;
+        line-height: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+    .ctaText {
+        font-size: 6rem;
+        line-height: 6rem;
+        margin-bottom: 2rem;
+    }
+}
