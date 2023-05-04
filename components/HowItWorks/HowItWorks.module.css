@@ -1,72 +1,78 @@
 .howItWorksWrapper {
-    background-color: var(--green);
+    display: flex;
+    flex-direction: column;
     text-align: center;
-}
-
-
-.singleStep {
-    margin: 1rem 0;
-}
-.howItWorksContainerTitle {
-    font-family: var(--shrikhand);
-    color: var(--light-yellow);
-    font-size: 2.75rem;
-    padding-top: 2rem;
-}
-.stepBackground {
-    background-color: var(--white);
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-}
-
-.textContainer{
     font-family: var(--josefin);
-    width: 225px;
-    color: var(--navy-blue)
+    color: var(--navy-blue);
 }
-
-.textContainer h2 {
-    font-weight: 700;
-    font-size: 1.5rem;
+.title {
+    color: var(--light-yellow-title);
+    font-family: var(--shrikhand);
 }
-.stepsContainer {
-   max-width: 95%;
-   margin: 0 auto;
-   padding: 20rem 0; 
-   border: 1px solid yellow;
+.howItWorksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-/* .stepOne {
-    margin-top: 2rem;
-} */
-/* .stepTwo {
-    margin-top: 4rem;
-    border: 2px solid orange;
+.singleStep {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--light-yellow-text);
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    padding: 1.25rem;
+    margin: 1rem;
+    border: 1px solid var(--dark-gray);
 }
-
+.stepTitle {
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 0;
+}
+.stepOne {
+    padding-top: 6rem;
+}
+.stepOneImgContainer {
+    align-self: flex-end;
+}
+.stepOneImgContainer img {
+    max-width: 70px;
+}
+.stepTwo img {
+    max-width: 120px;
+    align-self: center;
+}
 .stepThree {
-    margin-top: 20rem;
-    border: 2px solid blue;
-} */
+    padding-top: 4rem;
+}
+.stepThreeDescContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.stepThreeImgOne img {
+    max-width: 120px;
+}
+.stepThreeImgTwo{
+    max-width: 80px;
+    align-self: flex-start;
+}
 
-@media (min-width: 992px) {
+
+@media (min-width: 1200px) {
     .howItWorksContainer {
-        background-repeat: no-repeat;
-        background-image: url("../../public/assets/howItWorks/wavy-line.png");
+        height: 800px ;
+        border: 1px solid magenta;
+        margin: 0 auto;
+        flex-direction: row-reverse;
+    }
+    .stepOne {
+        align-self: flex-start;
+    }
+    .stepThree {
+        align-self: flex-end;
     }
 }
 
-@media (min-width: 1290px) {
-    .howItWorksContainer {
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-image: url("../../public/assets/howItWorks/wavy-line.png");
-    }
-}
 
-/* @media (min-width: 1360px) {
-    .stepsContainer {
-        max-width: 60%;
-    }
-} */
