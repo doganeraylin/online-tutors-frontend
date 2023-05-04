@@ -3,23 +3,33 @@
     background-color: var(--light-yellow);
 }
 
+.whyColumns {
+    display: flex;
+    flex-direction: column;
+}
+
 .singleColumn {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 2rem auto;
     font-family: var(--josefin);
     color: var(--light-yellow);
-    max-width: 275px;
-    
+    max-width: 275px; 
+}
+
+.singleColumn img {
+    max-width: 250px;
 }
 
 .whyTitle {
     font-family: var(--shrikhand);
     color: var(--brownish-red);
     font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
 }
-
 .singleColumnDescription {
     padding: 1rem;
     margin-top: 1.5rem;
@@ -28,13 +38,19 @@
     text-align: center;
 }
 
-/* MEDIA QUERIES */
-
 @media (min-width: 576px) {
     .whyTitle {
         font-size: 3rem;
     }
 }
+
+@media (min-width: 992px) {
+    .whyColumns {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
 
 
 @media (min-width: 1200px) {
