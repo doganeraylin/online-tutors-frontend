@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+.singleTutor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--josefin);
+    color: var(--navy-blue);
+    position: relative;
+}
+.tutorInfo {
+    max-width: 160px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+}
+.tutorProfile,
+.tutorRating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 220px;
+    gap: 0.5rem;
+}
+.tutorProfile {
+    margin: 0.5rem 0;
+    font-size: 0.8rem;
+}
+.tutorProfile p,
+.tutorRating p {
+    margin: 0;
+}
+.tutorRating {
+    font-size: 0.7rem;
+}
+.rating {
+    color: var(--gold);
+}
+.tutorQuote p {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+.star {
+    max-width: 350px;
+    border: 1px solid magenta;
+}
+.tutorImg {
+    max-width: 20px;
+}
+.ratingIcon {
+    max-width: 15px;
+}
+.dotShape {
+    padding: 0.2rem;
+    background-color: var(--navy-blue);
+    border-radius: 50%;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .star {
+        max-width: 600px;
+        border: 1px solid magenta;
+    }
+    .tutorImg {
+        max-width: 50px;
+    }
+    .ratingIcon {
+        max-width: 30px;
+    }
+    .tutorInfo {
+        max-width: 220px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -40%);
+    }
+    .tutorQuote p {
+        text-align: center;
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+    }
+    .tutorProfile p {
+        font-size: 1.2rem;
+    }
+    .tutorRating p {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tutorsContainer {
+        display: flex;
+        gap: 1rem;
+        border: 1px solid navy;
+        height: 600px;
+    }
+      .container {
+        border: 1px solid green;
+        padding: 3rem 0;
+    }
+    .singleTutor {
+        border: 1px solid red;
+    }
+
+    .secondStar  {
+        align-self: flex-start;
+    }
+    .firstStar,
+    .thirdStar {
+        border: 1px solid palevioletred;
+        align-self: flex-end;
+    }
+}
