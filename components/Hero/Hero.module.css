@@ -1,16 +1,23 @@
-.heroContainer {
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
    display: flex;
    flex-direction: column;
    background-color: var(--home-pg-bg);
    padding: 1.5rem !important;
 }
 .heroTextContainer {
-   margin-bottom: 3rem;
-   color: var(--light-yellow)
+   max-width: 550px;
+   margin: 0 auto;
+   color: var(--light-yellow-text);
 }
 .heroTextTitle {
    font-size: 2.75rem;
+   color: var(--light-yellow-title);
    font-family: var(--shrikhand);
+}
+.heroTextSubtitle {
+   margin: 1rem 0;
 }
 .heroTextDescription {
    font-weight: 200;
@@ -24,22 +31,21 @@
 
 @media (min-width: 544px) {
    .heroTextTitle {
-      font-size: 5.25rem;
+      font-size: 5rem;
    }
 }
 @media (min-width: 768px) {
-   .heroContainer {
+   .container {
       flex-direction: row;
-      padding: 3rem !important;
       align-items: center;
    }
 } 
 @media (min-width: 1200px) {
-   .heroTextContainer {
-      max-width: 45%;
-   }
    .heroImg {
       display: block;
+   }
+   .heroTextContainer {
+      padding: 0 2rem;
    }
 }
 @media(min-width: 1900px) {
