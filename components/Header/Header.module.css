@@ -1,18 +1,14 @@
-.loginBtn {
-    padding: 0.2rem 1.5rem;
-    border-radius: 2rem;
-    border: 1px solid black;
-    font-size: 1rem;
-    font-weight: 700;
-    background-color: var(--light-yellow);
-    color: var(--green);
-    }
-
 .navbarContainer {
     display: flex;
-    justify-content: center !important;
+    justify-content: center;
+}    
+.containerFluid {
+    display: flex;
+    align-items: start;
 }
-
+.navbarLogo {
+    max-width: 100px;
+}
 .navbarToggler,
 .navbarToggler:focus,
 .navbarToggler:active,
@@ -21,66 +17,63 @@
     outline: none;
     box-shadow: none;
     border: 2px solid var(--light-yellow);
+    margin-bottom: 3rem;
 }
-
-/*  */
-
 .navbar {
     width: 100%;
-    border: 1px solid magenta;
 }
-
-.navbarLogo {
-    border: 2px solid blue;
+.navLinksContainer {
+    padding: 0 3rem 0 1rem;  
+    margin: 1rem 0;
 }
-
-
-.navLinks {
-    border: 2px solid black;
-    padding: 0 3rem 0 0;
-    
-}
-.navLinks a {
+.navLinksContainer a {
     color: var(--light-yellow);
     font-family: var(--josefin);
     font-size: 1.25rem;
+    text-decoration: none;
 }
 .dotImg {
+    display: none;
     max-width: 5px;
 }
-.btnContainer {
-    border: 1px solid magenta;
-}
-.logoContainer {
-    border: 1px solid orange;
-}
-/*  */
+.loginBtnContainer {
+    display: none;
+} 
 
 @media (min-width: 768px){
     .navbarLogo {
         max-width: 15%;
     }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-    .navLinks a {
-        font-size: 1rem;
+    .loginBtnContainer {
+        display: block;
+    }
+    .dotImg {
+        display: inline;
+    }
+    .navbarContainer {
+        margin: 0;
+    }
+    .containerFluid {
+        align-items: center;
     }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
-    .navLinks a {
+
+@media (min-width: 768px) {
+    .navLinksContainer {
+       padding: 0;
+       margin: 0 auto;
+    }
+    .navLinksContainer a {
         font-size: 1.5rem;
+        margin: 0 0.5rem;
+    }
+    .navbarToggler {
+        display: none;
+    }
+    .dotImg {
+        margin: 0 0.5rem;
     }
 }
 
-@media (min-width: 1200px) {
-    .loginBtn {
-        padding: 0.5rem  2rem;
-    }
-}
 
-@media (min-width: 1400px) {
-    .navLinks a {
-        font-size: 2.5rem;
-    }
-}
+
