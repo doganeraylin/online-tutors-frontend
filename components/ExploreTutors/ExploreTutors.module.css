@@ -1,6 +1,10 @@
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .singleTutor {
     display: flex;
@@ -29,17 +33,18 @@
 }
 .tutorProfile {
     margin: 0.5rem 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 .tutorProfile p,
 .tutorRating p {
     margin: 0;
 }
 .tutorRating {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 .rating {
     color: var(--gold);
+    font-size: 1rem;
 }
 .tutorQuote p {
     text-align: center;
@@ -51,23 +56,20 @@
     border: 1px solid magenta;
 }
 .tutorImg {
-    max-width: 20px;
+    max-width: 23px;
 }
 .ratingIcon {
-    max-width: 15px;
+    max-width: 17px;
 }
 .dotShape {
     padding: 0.2rem;
-    background-color: var(--navy-blue);
+    background-color: var(--dark-gray);
     border-radius: 50%;
 }
-
-
 
 @media (min-width: 768px) and (max-width: 1199px) {
     .star {
         max-width: 600px;
-        border: 1px solid magenta;
     }
     .tutorImg {
         max-width: 50px;
@@ -86,8 +88,8 @@
     }
     .tutorQuote p {
         text-align: center;
-        margin-top: 0.5rem;
-        font-size: 1.5rem;
+        margin-top: 1.2rem;
+        font-size: 1.3rem;
     }
     .tutorProfile p {
         font-size: 1.2rem;
@@ -101,23 +103,16 @@
     .tutorsContainer {
         display: flex;
         gap: 1rem;
-        border: 1px solid navy;
         height: 600px;
     }
       .container {
-        border: 1px solid green;
         padding: 3rem 0;
     }
-    .singleTutor {
-        border: 1px solid red;
-    }
-
     .secondStar  {
         align-self: flex-start;
     }
     .firstStar,
     .thirdStar {
-        border: 1px solid palevioletred;
         align-self: flex-end;
     }
 }
