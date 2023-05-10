@@ -1,0 +1,70 @@
+.commonStyle {
+    border-radius: 50px;
+    border: 1px solid var(--dark-gray);
+    font-weight: bold;   
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+/* bg color */
+.orangeBg {
+   background-color: var(--orange);
+}
+.lightYellowBg {
+    background-color: var(--light-yellow-title);
+}
+.grayBg {
+    background-color: var(--light-gray);
+}
+
+/* font color */
+.whiteText {
+    color: var(--white);
+}
+.blueText {
+    color: var(--sky-blue);
+}
+.grayText {
+    color: var(--dark-gray);
+}
+.orangeText {
+    color: var(--orange);
+}
+
+/* button size */
+.smallBtn {
+    padding: 0 1rem;
+}
+.mediumBtn {
+    padding: 0 1.75rem;
+}
+.largeBtn {
+    padding: 0 1.5rem;
+}
+
+/* font-size */
+
+.smallFont {
+    font-size: 0.75rem;
+}
+.mediumFont {
+    font-size: 1rem;
+}
+.largeFont {
+    font-size: 1.25rem;
+}
+
+/* height */
+
+.smallHeight {
+    height: 25px;
+    line-height: 25px;
+}
+.mediumHeight {
+    height: 35px;
+    line-height: 35px;
+}
+.largeHeight {
+    height: 45px;
+    line-height: 45px;
+}
