@@ -1,0 +1,124 @@
+.container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    border: 1px solid magenta;
+    font-family: var(--josefin);
+    font-size: 3.5rem;
+}
+.textImg {
+    max-width: 350px;
+}
+.meetContainer,
+.ourContainer,
+.tutorsContainer {
+    position: relative;
+}
+.meetContainer p,
+.ourContainer p,
+.tutorsContainer p {
+    position: absolute;
+}
+.meetContainer p,
+.tutorsContainer p {
+    color: var(--light-yellow-title);
+}
+.ourContainer p {
+    color: var(--gold);
+}
+.meetContainer p {
+    bottom: 30px;
+    left: 110px;
+}
+.ourContainer p {
+    bottom: 50px;
+    left: 130px;
+}
+.tutorsContainer p {
+    bottom: 25px;
+    left: 100px;
+}
+.cloudsTopLeft {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    z-index: -1;
+}
+.blueBorderCloud {
+    max-width: 200px;
+}
+.bottomCloudContainer {
+    position: absolute;
+    right: 10px;
+    bottom: 60px;
+    z-index: -1;
+    transform: rotate(-5deg);
+}
+.bottomCloud {
+    max-width: 220px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        border: 1px solid green;
+        display: block;
+        font-size: 4.5rem;
+    }
+    .mainContent {
+        display: flex;
+        flex-direction: column;
+    }
+    .meetContainer {
+        align-self: flex-end !important;
+    }
+    .ourContainer {
+        align-self: center;
+    }
+    .textImg {
+        max-width: 400px;
+    }
+    .blueBorderCloud {
+        max-width: 250px;
+    }
+    .bottomCloud {
+        max-width: 260px;
+    }
+    .bottomCloudContainer {
+        bottom: 10px;
+        transform: rotate(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        border: 1px solid green;
+        display: block;
+        font-size: 4.5rem;
+    }
+    .mainContent {
+        display: flex;
+        flex-direction: column;
+    }
+    .meetContainer {
+        align-self: flex-end !important;
+    }
+    .ourContainer {
+        align-self: center;
+    }
+    .textImg {
+        max-width: 400px;
+    }
+    .blueBorderCloud {
+        max-width: 250px;
+    }
+    .bottomCloud {
+        max-width: 260px;
+    }
+    .bottomCloudContainer {
+        bottom: 10px;
+        transform: rotate(0);
+    }
+}
