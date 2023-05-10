@@ -4,7 +4,7 @@ import styles from "./Contact.module.css";
 const Contact = () => {
     return (
         <div className={styles.container}>
-            <h1>Let's Connect!</h1>
+            <h1 className="title">Let's Connect!</h1>
             <div className= {styles.formContainer}>
                 <div className={styles.formImgsLeft}>
                     <img className={styles.stars} src="./assets/contact/stars.png"></img>
@@ -29,8 +29,8 @@ const Contact = () => {
                     buttonColor="lightYellowBg"
                     buttonTextColor="blueText"
                     buttonSize="largeBtn"
-                    buttonFontSize="mediumFont"
-                    height="mediumHeight"            
+                    buttonFontSize="largeFont"
+                    height="largeHeight"            
                 />
             </div>
         </div>
