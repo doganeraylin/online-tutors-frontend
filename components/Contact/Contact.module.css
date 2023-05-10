@@ -3,7 +3,6 @@
     max-width: 1200px;
     margin: 0 auto;
     color: var(--light-yellow-title);
-    padding: 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,13 +17,11 @@
     justify-content: space-between;
     text-align: center;
     max-width: 1200px;
-    margin: 2rem;
 }
 .form {
     max-width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     margin: 0 2.5rem;
 }
@@ -44,6 +41,7 @@
 .formContainer textarea {
     border-radius: 20px;
     padding: 5rem 2rem;
+    resize: none;
 }
 .formContainer ::placeholder {
     opacity: 0.5;
@@ -51,8 +49,6 @@
 .formContainer img {
     display: none;
 }
-
-/* media queries */
 
 @media (min-width: 768px) {
     .formContainer img {
@@ -98,20 +94,18 @@
     }
     .formContainer input,
     .formContainer textarea {
-        margin: 0.25rem;
         padding: 0.5rem 4rem;
         border-radius: 50px;
         border: none;
     }
     .formContainer textarea {
         border-radius: 20px;
-        padding: 3.75rem 4rem;
+        padding: 6rem 4rem;
     }
     .formContainer ::placeholder {
         font-size: 1.25rem;
     }
 }
-
 
 @media (min-width: 1200px) {
     .container h1 {
@@ -140,14 +134,13 @@
     }
     .formContainer input,
     .formContainer textarea {
-        margin: 0.25rem;
         padding: 1rem 5rem;
         border-radius: 50px;
         border: none;
     }
     .formContainer textarea {
         border-radius: 20px;
-        padding: 5rem 5rem;
+        padding: 5rem;
     }
     .formContainer ::placeholder {
         font-size: 1.25rem;
