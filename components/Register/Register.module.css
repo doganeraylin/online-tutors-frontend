@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--josefin);
+    color: var(--navy-blue);
+    background-color: var(--white);
+    border: 1px solid var(--dark-gray);
+    border-radius: 30px;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.imgContainer img {
+    max-width: 180px;
+    padding: 0.5rem 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+.form h1 {
+    font-weight: bold;
+}
+.form p {
+    margin-top: 1rem;
+}
+.form input {
+    margin: 0.50rem auto;
+    padding: 0.50rem;
+    display: block;
+    border-radius: 50px;
+    border: 1px solid var(--dark-gray)
+}
+
+.form ::placeholder {
+    opacity: 0.5;
+    padding: 1rem
+}
+
+.registerLink {
+    text-decoration: none;
+    color: var(--navy-blue);
+    border: 1px solid magenta;
+}
+
+.registerLink span {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnContainer {
+    margin-top: 1rem;
+}
+
+@media (min-width: 576px) {
+    .imgContainer img {
+        max-width: 270px;
+        padding: 0.5rem 0;
+    }
+    .form input {
+        margin: 0.50rem auto;
+        padding: 1rem 3rem;
+        display: block;
+        border-radius: 50px;
+        border: 1px solid var(--dark-gray)
+    }
+    .form ::placeholder {
+        padding: 0;
+    }
+    .registerLink {
+        font-size: 1.25rem;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 950px;
+    }
+    .form {
+        flex-direction: row;
+        gap: 5rem;
+        padding: 15% 0;
+    }
+    .imgContainer img {
+        max-width: 380px;
+    }
+    .form input {
+        margin: 2rem auto;
+        padding: 1.5rem 5rem;
+    }
+    .registerLink {
+        font-size: 1.75rem;
+    }
+}
