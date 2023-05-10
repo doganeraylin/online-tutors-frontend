@@ -3,7 +3,7 @@ import Button from '../Button/Button'
 import styles from './Hero.module.css'
 
 const Hero = () => (
-    <div className={`${styles.heroContainer}`}>
+    <div className={`${styles.container}`}>
         <div className={`${styles.heroTextContainer} w-100`}>
             <h1 className={styles.heroTextTitle}>Playful Learning Adventures</h1>
             <h2 className={styles.heroTextSubtitle}>Transform your child's learning experience with Playful Minds!</h2>
