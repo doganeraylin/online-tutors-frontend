@@ -1,23 +1,74 @@
 import styles from './HowItWorks.module.css'
+import { useRef, useEffect} from "react"
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const HowItWorks = () => {
+    const stepsContainer = useRef();
+    
+    useEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.from(".single-step-one", {
+                x: -50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".single-step-one",
+                    start: 'top 80%',
+                    scrub: true,
+                }
+            });
+    
+            gsap.from(".single-step-two", {
+                x: -50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".single-step-two",
+                    start: 'top 80%',
+                    scrub: true,
+                }
+            });
+            
+            gsap.from(".single-step-three", {
+                x: -50,
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".single-step-three",
+                    start: 'top 80%',
+                    scrub: true,
+                }
+            });
+        }, [stepsContainer]);
+        
+        return () => {
+            ctx.revert();
+        }
+        }, []);
+        
+
+    
+
     return (
-        <div className={styles.howItWorksWrapper}>
-            <h1 className={styles.title}>how it works</h1>
-            <div className={styles.howItWorksContainer}>
-                <div className={` ${styles.stepOne} ${styles.singleStep}`}>
+        <div ref={stepsContainer} className={styles.howItWorksWrapper}>
+            <h1 className="title">Book Your Lesson in Minutes</h1>
+            <div   className={styles.howItWorksContainer}>
+                <div className={` ${styles.stepOne} ${styles.singleStep} single-step-one`}>
                     <p className={styles.stepTitle}>Join Our Community</p>
                     <p className={styles.stepDescription}>Simply create an account and browse through our list of experienced tutors.</p>
                     <div className={styles.stepOneImgContainer}>
                         <img src="./assets/howItWorks/step-1-img-1.png"></img>
                     </div>                 
                 </div>
-                <div className={`${styles.singleStep} ${styles.stepTwo}`}>
+                <div className={`${styles.singleStep} ${styles.stepTwo} single-step-two`}>
                     <img src="./assets/howItWorks/step-2-img-1.png"></img>
                     <p className={styles.stepTitle}>Perfect Class, Perfect Time</p>
                     <p className={styles.stepDescription}>Book your first class and customize the length to suit their schedule and learning style.</p>
                 </div>
-                <div className={`${styles.stepThree} ${styles.singleStep}`}>
+                <div className={`${styles.stepThree} ${styles.singleStep} single-step-three`}>
                     <div className={styles.stepThreeImgOne} >
                         <img src="./assets/howItWorks/step-3-img-1.png"></img>
                     </div>
