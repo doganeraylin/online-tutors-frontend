@@ -1,12 +1,86 @@
 import Link from 'next/link'
+import { useRef, useEffect} from "react"
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+import Button from '../Button/Button'
 import styles from './Footer.module.css'
 
 const Footer = () => {
+
+    const birdLeftRef = useRef(null);
+    const birdRightRef = useRef(null);
+
+    
+    useEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.to(birdLeftRef.current, {
+              duration: 3,
+              x: -300,
+              y: -100,
+              ease: "slow(0.7, 0.7, false)",
+              yoyo: true,
+              scrollTrigger: {
+                trigger: birdLeftRef.current,
+                start: "top 100%", 
+                end: "bottom top", 
+              },
+              onComplete: function() {
+                gsap.to(birdLeftRef.current, {
+                  duration: 1.5,
+                  rotation: "180",
+                  onComplete: function() {
+                    gsap.to(birdLeftRef.current, {
+                      duration: 1.25,
+                      x: 0,
+                      y: 0,
+                      ease: "slow(0.7, 0.7, false)",
+                    });
+                  }
+                });
+              }
+            });
+            gsap.to(birdRightRef.current, {
+              duration: 3,
+              x: 300,
+              y: -100,
+              ease: "slow(0.7, 0.7, false)",
+              yoyo: true,
+              scrollTrigger: {
+                trigger: birdRightRef.current,
+                start: "top 100%", 
+                end: "bottom top", 
+              },
+              onComplete: function() {
+                gsap.to(birdRightRef.current, {
+                  duration: 1.5,
+                  rotation: "180",
+                  onComplete: function() {
+                    gsap.to(birdRightRef.current, {
+                      duration: 1.25,
+                      x: 0,
+                      y: 0,
+                      ease: "slow(0.7, 0.7, false)",
+                    });
+                  }
+                });
+              }
+            });
+            
+        }, [birdLeftRef, birdRightRef]);
+        return () => {
+
+            ctx.revert();
+        }
+        }, []);
+
+
     return (
         <div className={styles.container}>
             <div className={styles.imgContainer}>
-                <img src="./assets/footer/bird-right.png"></img>
-                <img src="./assets/footer/bird-left.png"></img>
+                <img ref={birdLeftRef} src="./assets/footer/bird-left.png"></img>
+                <img ref={birdRightRef} src="./assets/footer/bird-right.png"></img>
+            
             </div>
             <div className={styles.navLinks}> 
                 <Link className={styles.link} href="/about">about</Link>
@@ -20,6 +94,9 @@ const Footer = () => {
                     <img src="./assets/footer/twitter.png"></img>
                     <img src="./assets/footer/linkedin.png"></img>
                 </div>
+            </div>
+            <div>
+                <p className={styles.backToTop}> ⇪ </p>
             </div>
         </div>
     )
