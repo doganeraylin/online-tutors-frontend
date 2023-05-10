@@ -1,3 +1,8 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid magenta;
+}
 .reviewsWrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -12,13 +17,20 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-style: italic;
+    font-weight: bold;
     max-width: 350px;
-    background-color: pink;
     border-radius: 10px;
     margin: 1rem auto;
-    padding: 1rem;
-    border: 1px solid green;
+    font-size: 1.2rem;
+    padding: 1.5rem 1rem;
     font-family: var(--josefin);
+    background-color: var(--light-yellow-text);
+}
+.reviewerName {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: normal;
 }
 .cloudCenter img {
     max-width: 70px;
@@ -27,7 +39,7 @@
     grid-column: 4 / 5;
 }
 .cloudTop img {
-    max-width: 140px;
+    max-width: 130px;
 }
 .cloudBottom img {
     max-width: 120px;
@@ -38,22 +50,12 @@
 .ratingStar {
     max-width: 30px;
 }
-
 .ratingStar,
 .profileImg {
     margin-bottom: 1rem;
 }
-
 .profileImg {
     max-width: 90px;
-}
-.airplaneRide {
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
-
-}
-.airplaneRide img {
-    max-width: 70px;
 }
 .flyingAirplane {
     grid-row: 4 / 6;
@@ -61,7 +63,8 @@
     z-index: -1;
 }
 .flyingAirplane img {
-    max-width: 200px;
+    max-width: 120px;
+    margin-bottom: 4rem;
 }
 
 
@@ -82,7 +85,7 @@
         margin: 1rem 0 0 5rem;
     }
     .flyingAirplane img {
-        max-width: 400px;
+        max-width: 375px;
     }
 
 }
