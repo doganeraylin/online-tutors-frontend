@@ -59,11 +59,29 @@
     align-self: flex-start;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+    .howItWorksContainer {
+        height: 800px;
+        margin: 0 auto;
+        flex-direction: row-reverse;
+    }
+    .singleStep {
+        width: 290px;
+        height: 290px;
+    }
+    .stepOne {
+        align-self: flex-start;
+    }
+    .stepThree {
+        align-self: flex-end;
+    }
+}
+
+
 
 @media (min-width: 1200px) {
     .howItWorksContainer {
-        height: 800px ;
-        border: 1px solid magenta;
+        height: 800px;
         margin: 0 auto;
         flex-direction: row-reverse;
     }
@@ -74,5 +92,6 @@
         align-self: flex-end;
     }
 }
+
 
 
