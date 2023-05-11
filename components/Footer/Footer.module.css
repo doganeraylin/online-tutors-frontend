@@ -20,6 +20,11 @@
     color: var(--white);
 }
 
+.link:hover {
+    color: var(--orange);
+    scale: 1.2;
+}
+
 .socialMediaContainer {
     display: flex;
     justify-content: center;
