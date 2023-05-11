@@ -21,7 +21,7 @@ useEffect(() => {
         yoyo: true,
         scrollTrigger: {
             trigger: topCloudTrigger.current,
-            start: "top 100%",
+            start: "top 20%",
             end: "bottom top",
         }
         });
@@ -34,7 +34,7 @@ useEffect(() => {
         yoyo: true,
         scrollTrigger: {
             trigger: centerCloudRef.current,
-            start: "top 100%",
+            start: "top top",
             end: "bottom top",
         }
         });
@@ -46,9 +46,9 @@ useEffect(() => {
             repeat: -1,
             yoyo: true,
             scrollTrigger: {
-                trigger: bottomCloudRef.current,
-                start: "top 100%", 
-                end: "bottom top",
+                trigger: bottomCloudTrigger.current,
+                start: "top 20%", 
+                end: "bottom top"
             }
             });
     }, [topCloudRef, centerCloudRef, bottomCloudRef]);
@@ -67,17 +67,17 @@ useEffect(() => {
             <div ref={topCloudRef} className={`${styles.cloudTop} ${styles.gridContainer} cloud-top`}>
                 <img  src="./assets/reviews/cloud.png"></img>
             </div>
-            <div ref={centerCloudRef} className={`${styles.cloudCenter} ${styles.gridContainer}`}>
-                <img src="./assets/reviews/cloud.png"></img>
-            </div>
             <div className={`${styles.reviewContainer} ${styles.gridContainer}`}>
                 <img className={styles.arrow} src="./assets/tutor/previous.png"></img>
-                <div className={styles.reviewContent}>
+                <div  className={styles.reviewContent}>
                     <p>"I'm just happy, and I know it works instantly and very useful tactic. I wasn't expecting this, thank you."</p>
                     <img className={styles.profileImg} src="./assets/contact/round-shape.png"></img><img></img>
                     <p className={styles.reviewerName}>Donna Stroupe</p>
                 </div>
                 <img className={styles.arrow} src="./assets/tutor/next.png"></img>
+            </div>
+            <div ref={centerCloudRef} className={`${styles.cloudCenter} ${styles.gridContainer}`}>
+                <img src="./assets/reviews/cloud.png"></img>
             </div>
             <div ref={bottomCloudTrigger} className={`${styles.flyingAirplane} ${styles.gridContainer}`}>
                 <img src="./assets/reviews/flying-airplane.png"></img>
