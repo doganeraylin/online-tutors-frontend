@@ -6,7 +6,6 @@ import styles from "./Login.module.css"
 const Login = () => {
     return (
     <>
-        <Header/>
         <div className={styles.container}>
             <div className={styles.form}>
                 <div className={styles.imgContainer}>

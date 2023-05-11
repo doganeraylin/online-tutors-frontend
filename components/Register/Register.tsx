@@ -6,7 +6,6 @@ import styles from "./Register.module.css"
 const Register = () => {
     return (
     <>
-        <Header/>
         <div className={styles.container}>
             <div className={styles.form}>
                 <div className={styles.imgContainer}>
