@@ -1,11 +1,9 @@
 import About from "../../components/About/About"
+import Layout from "../../components/Layout/Layout";
 
-const about = () => {
-    return (
-      <div >
-          <About/>
-      </div>
-    );
-  };
-  
-  export default about;
+const about = () => 
+<Layout bgColor=" #BAD0F6">
+   <About/>
+</Layout>
+
+export default about;
