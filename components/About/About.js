@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react"
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Button from '../Button/Button'
-import { matchMedia, mediaQueries } from "../AnimationScreenSize/mediaQueries"
+import { matchMedia, mediaQueries } from "../AnimationScreenSize/animationScreenSize"
 import styles from "./About.module.css"
 gsap.registerPlugin(ScrollTrigger);
 

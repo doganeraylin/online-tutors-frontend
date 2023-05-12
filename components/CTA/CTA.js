@@ -1,55 +1,53 @@
 import Link from 'next/link'
 import Button from '../Button/Button'
-import { useRef, useEffect} from "react"
+import { useRef, useEffect, useState} from "react"
 import { gsap } from 'gsap';
+import { matchMedia, mediaQueries } from "../AnimationScreenSize/animationScreenSize"
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import SplitType from 'split-type'
-
-
-gsap.registerPlugin(ScrollTrigger);
-
 import styles from './CTA.module.css'
+gsap.registerPlugin(ScrollTrigger);
 
 
 const CTA = () => {
     const textRef = useRef(null)
     const buttonRef = useRef(null);
-    
-    let tl = gsap.timeline()
 
     useEffect(() => {
-        let ctx = gsap.context(() => {
-            gsap.to(buttonRef.current, {
-            duration: 4,
-            scale: 1.5,
-            ease: "slow(0.7, 0.7, false)",
-            yoyo: true,
-            scrollTrigger: {
-                trigger: buttonRef.current,
-                start: "bottom bottom", 
-                end: "top 20%", 
-                scrub: true,
-            }
-            });
-            gsap.from(textRef.current, {
-                opacity: 0,
-                y: 100,
-                ease: "power3",
-                duration: 2,
-                yoyo: true,
-                scrub: true,
-                scrollTrigger: {
-                    trigger: textRef.current,
-                    start: "top 100%", 
-                    end: "bottom top", 
+        matchMedia.add(mediaQueries, (context) => {
+            let { isDesktop } = context.conditions;
+            if (isDesktop) {
+                let ctx = gsap.context(() => {
+                    gsap.to(buttonRef.current, {
+                    duration: 4,
+                    scale: 1.5,
+                    ease: "slow(0.7, 0.7, false)",
+                    yoyo: true,
+                    scrollTrigger: {
+                        trigger: buttonRef.current,
+                        start: "bottom bottom", 
+                        end: "top 20%", 
+                        scrub: true,
+                    }
+                });
+                gsap.from(textRef.current, {
+                    opacity: 0,
+                    y: 100,
+                    ease: "power3",
+                    duration: 2,
+                    yoyo: true,
                     scrub: true,
-                }
-            })
-            }, 
-            [buttonRef, textRef]);
-        
-            return () => ctx.revert();
-        }, []);
+                    scrollTrigger: {
+                        trigger: textRef.current,
+                        start: "top 100%", 
+                        end: "bottom top", 
+                        scrub: true,
+                    }
+                })}, [buttonRef, textRef]);
+            
+                return () => ctx.revert();
+            }
+        })
+    }, []);
         
     return (
         <div  className={styles.container}>
@@ -66,10 +64,10 @@ const CTA = () => {
                         />
                 </Link>
             </div>
-
         </div>
     )
 }
+
    
 
 export default CTA
