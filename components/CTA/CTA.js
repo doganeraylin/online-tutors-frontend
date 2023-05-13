@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 import Button from '../Button/Button'
 import { useRef, useEffect, useState} from "react"
 import { gsap } from 'gsap';
@@ -11,6 +12,9 @@ gsap.registerPlugin(ScrollTrigger);
 const CTA = () => {
     const textRef = useRef(null)
     const buttonRef = useRef(null);
+    const router = useRouter()
+
+    const handleBtnClick = () => router.push('/register')
 
     useEffect(() => {
         matchMedia.add(mediaQueries, (context) => {
@@ -61,6 +65,7 @@ const CTA = () => {
                         buttonSize="largeBtn"
                         buttonFontSize="largeFont"
                         height="largeHeight"
+                        onClick={handleBtnClick}
                         />
                 </Link>
             </div>
