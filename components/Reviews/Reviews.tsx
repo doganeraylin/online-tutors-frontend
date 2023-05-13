@@ -1,10 +1,20 @@
-import { useRef, useEffect} from "react"
+import { useRef, useEffect, useState} from "react"
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import styles from './Reviews.module.css'
 gsap.registerPlugin(ScrollTrigger);
 
-const Reviews = () => {
+
+interface SliderProps {
+    reviewSlide: [];
+}
+
+interface SlideIndex {
+    slideIndex: number
+}
+
+const Reviews = ({ reviewSlide } : SliderProps) => {
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
     const topCloudRef = useRef<HTMLDivElement>(null);
     const topCloudTrigger = useRef<HTMLDivElement>(null);
     const centerCloudRef = useRef<HTMLDivElement>(null);
@@ -57,6 +67,22 @@ useEffect(() => {
         ctx.kill();
     }
     }, []);
+
+    const goToPrevious = () => {
+        const isFirstSlide = currentIndex === 0;
+        const newIndex = isFirstSlide ? reviewSlide.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
+    };
+    const goToNext = () => {
+        const isLastSlide = currentIndex === reviewSlide.length - 1;
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
+    };
+    const goToSlide = (slideIndex : SlideIndex ) => {
+        setCurrentIndex(slideIndex.slideIndex);
+    };
+
+
     
     return (
         <div className={styles.container}> 
@@ -68,6 +94,24 @@ useEffect(() => {
                 <img  src="./assets/reviews/cloud.png"></img>
             </div>
             <div className={`${styles.reviewContainer} ${styles.gridContainer}`}>
+                <div className={styles.arrowContainer}>
+                    <div onClick={goToPrevious}>
+                    ❰
+                    </div>
+                    <div onClick={goToNext}>
+                    ❱
+                    </div>
+                </div>
+                {reviewSlide && reviewSlide.map((slide, slideIndex) => (
+                <div
+                    key={slideIndex}
+                    onClick={() => goToSlide({ slideIndex })}
+                >
+                    ●
+                </div>
+                ))}
+            </div>
+            {/* <div className={`${styles.reviewContainer} ${styles.gridContainer}`}>
                 <img className={styles.arrow} src="./assets/tutor/previous.png"></img>
                 <div  className={styles.reviewContent}>
                     <p>"I'm just happy, and I know it works instantly and very useful tactic. I wasn't expecting this, thank you."</p>
@@ -75,7 +119,7 @@ useEffect(() => {
                     <p className={styles.reviewerName}>Donna Stroupe</p>
                 </div>
                 <img className={styles.arrow} src="./assets/tutor/next.png"></img>
-            </div>
+            </div> */}
             <div ref={centerCloudRef} className={`${styles.cloudCenter} ${styles.gridContainer}`}>
                 <img src="./assets/reviews/cloud.png"></img>
             </div>
