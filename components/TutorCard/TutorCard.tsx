@@ -1,26 +1,53 @@
 import Button from '../Button/Button'
 import styles from "./TutorCard.module.css"
 
-const TutorCard = () => {
+interface Review {
+    username: string,
+    review: string,
+    age: number
+}
+
+interface Tutor {
+    id: number
+    img: string,
+    name: string,
+    position: string,
+    bio: string,
+    rating: number,
+    lessons_taught: number,
+    hourly_rate: number,
+    subjects: [], 
+    about_me: string,
+    about_class: string,
+    reviews: Review[]
+}
+interface TutorProps {
+    tutors: Tutor[];
+}
+
+const TutorCard = ({ tutors } : TutorProps) => {
     return (
+
         <div className={styles.container}>
-            <div className={styles.tutorTop}>
+           {tutors && tutors.map((tutor) => 
+           <div className={styles.tutorCard}>
+                <div className={styles.tutorTop}>
                 <div className={styles.tutorReview}>
                     <img className={styles.tutorImg} src="./assets/contact/sun.png"></img>
                     <div className={styles.ratingContainer}>
                         <img className={styles.ratingIcon} src="./assets/tutor/rating.png"></img>
-                        <p className={styles.rating}>4.9</p>
+                        <p className={styles.rating}>{tutor.rating}</p>
                     </div>
-                    <p className={styles.reviewCount}>602 lessons</p>
+                    <p className={styles.reviewCount}>{tutor.lessons_taught} lessons</p>
                 </div>
                 <div className={styles.tutorBio}>
-                    <p className={styles.tutorName}>tutor name</p>
-                    <p className={styles.tutorField}>tutor position</p>
-                    <p className={styles.tutorDescription}>Hi I'm an ESL teacher with 3 years of experience. I like preparing activities for children. I like birds.</p>
+                    <p className={styles.tutorName}>{tutor.name}</p>
+                    <p className={styles.tutorField}>{tutor.position}</p>
+                    <p className={styles.tutorDescription}>{tutor.bio}</p>
                 </div>
             </div>
             <div className={styles.tutorBottom}>
-                <p className={styles.pricing}>$10/hr</p>
+                <p className={styles.pricing}>${tutor.hourly_rate}</p>
                 <Button 
                         content="book"
                         buttonColor="lightYellowBg"
@@ -32,6 +59,10 @@ const TutorCard = () => {
             
                     />
             </div>
+           </div>
+           
+           )}
+      
         </div>
     )
 }
