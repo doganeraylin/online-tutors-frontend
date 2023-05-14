@@ -1,23 +1,28 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,700;1,300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
 :root {
     --green: #3EA66B;
     --light-yellow: #FDFAD3;
     --light-yellow-title: #FFFBE0;
     --light-yellow-text: #FFFBEE;
+    --gold: #FFD058;
     --brownish-red: #BD4C25;
-    --sky-blue: #A6E1D8;
+    --sky-blue: #3EABDB;
     --white: #FFFF;
     --navy-blue: #072A59;
+    --home-pg-bg: #A6E1D8;
     --about-pg-bg: #BAD0F6;
     --orange: #FF7134;
-  
+    --dark-gray: #7B7A7A;
+    --light-gray: #F4F4F4;
     --baby-pink: #FECDDC;
+    --black: #000;
     
     --shrikhand: 'Shrikhand', cursive;
     --josefin: 'Josefin Sans', sans-serif;
+    --spray: 'Rubik Spray Paint', cursive;
 }
 
 html {
@@ -28,6 +33,31 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--josefin);
     background-color: var(--about-pg-bg);
 }
 
+.title {
+    font-family: var(--shrikhand);
+    color: var(--light-yellow-title);
+    text-align: center;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.home-page-bg-transition {
+    background: linear-gradient(0deg, rgba(255,191,121,1) 0%, rgba(166,225,216,1) 100%);
+}
+
+@media (min-width: 576px) {
+    .title {
+        font-size: 4rem;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .title {
+        font-size: 5rem;
+    }
+}
