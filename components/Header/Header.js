@@ -6,16 +6,27 @@ import styles from "./Header.module.css"
 
 const Header = () => {
   const router = useRouter()
+  const [screenSize, setScreenSize] = useState(null); 
   const links = [
       { href: '/about', text: 'about us', id: "0" },
       { href: '/find-a-tutor', text: 'find a tutor', id: "1" },
       { href: '/contact', text: 'contact', id: "2 "},
-      { href: '/login', text: 'login', id: "3" }
   ];
 
   useEffect(() => {
     const activeLink = document.querySelector(`.${styles.activeLink} li`)
   })
+
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (screenSize && screenSize < 768) {
+    links.push({ href: '/login', text: 'login', id: "3" });
+  }
 
   const handleLogoClick = () => {
     router.push('/')
