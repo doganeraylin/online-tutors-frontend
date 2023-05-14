@@ -1,101 +1,159 @@
 import { useState } from "react"
 import Button from "../Button/Button"
-import Chip from "../Chip/Chip"
 import styles from "./TutorDetails.module.css"
 
-const TutorReview = () => {
-const [currentTab, setCurrentTab] = useState<string>('0')
-    
-  const tabs = [
-    { tab: "about me", id: "0" },
-    { tab: "about the class", id: "1" },
-    { tab: "reviews", id: "2" },
-  ]
+interface Review {
+    username: string,
+    review: string,
+    rating: number
+}
+
+
+interface Tutor {
+    id: number
+    img: string,
+    name: string,
+    position: string,
+    rating: number,
+    lessons_taught: number,
+    hourly_rate: number,
+    subjects: [], 
+    about_me: string,
+    about_class: string,
+    reviews: Review[]
+}
+interface TutorProps {
+    tutors: Tutor;
+}
+
+const TutorReview = ( {tutors} : TutorProps) => {
+
+const [currentTab, setCurrentTab] = useState<string>('aboutMe')
+
+  const tabList = [
+    {
+      name: 'aboutMe',
+      label: 'About Me',
+    },
+    {
+      name: 'aboutClass',
+      label: 'About Class',
+    },
+    {
+      name: 'reviews',
+      label: 'Reviews',
+    },
+  ];
+  
 
   const handleTabClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const tabId = e.currentTarget.id 
     setCurrentTab(tabId)
   }
+  const AboutMe = ({ aboutMe }: { aboutMe: string }) => (
+    <div>
+      <p>{aboutMe}</p>
+    </div>
+  )
+  
+  const AboutClass = ({ aboutClass }: { aboutClass: string }) => (
+    <div>
+      <p>{aboutClass}</p>
+    </div>
+  )
+
+  
+  
+  const TutorReviews = ({ reviews }: { reviews: Review[] }) => (
+    <div className={styles.reviewsContainer}>
+      {reviews.map((review) => 
+        <div key={review.username} className={styles.singleReview}>
+          <p>@{review.username}</p>
+          <div>
+          {Array.from({ length: review.rating }).map((_, index) => (
+           <img key={index} className={styles.ratingIcon} src="./assets/tutor/rating.png"></img>
+          ))}
+        </div>
+          <p>{review.review}</p>
+     
+        </div>
+      )}
+    </div>
+  )
 
     return (
-        <div className={styles.container}>
-            <div className={styles.tutorDetailsContainer}>
-                <div className={styles.tutorHeaderContainer}>
-                    <img className={styles.tutorImg} src="./assets/about/sun.png"></img>
-                    <div className={styles.tutorPersonalInfo}>
-                        <p className={styles.tutorName}>Aylin Doğaner</p>
-                        <p className={styles.tutorField}>Frontend Developer</p>
-                    </div>
-                    <div className={styles.ratingWrapper}>
-                        <div className={styles.ratingContainer}>
-                            <img className={styles.ratingImg} src="./assets/tutor/rating.png"></img>
-                            <p className={styles.rating}>4.9</p>
-                        </div>
-                        <p className={styles.lessonCount}>602 lessons</p>
-                      
-                     
-                    </div>
-                </div>    
-                <div className={styles.tutorSkilsContainer}>
-                    <div className={styles.skillsContainer}>
-                        <p className={styles.skillTitle}>Teaches</p>
-                        <div className={styles.chipsContainer}>
-                            {/* <img className={styles.previousIcon} src="./assets/tutor/previous.png"></img> */}
-                            <div className={styles.chips}>
-                                <Chip />
-                                <Chip />
+        <div className={styles.wrapper}>
+            <div className={styles.container}>
+                    <div className={styles.tutorDetailsContainer}>
+                       <div className={styles.tutorHeaderContainer}>
+                           <img className={styles.tutorImg} src="./assets/contact/round-shape.png"></img>
+                           <div className={styles.tutorPersonalInfo}>
+                               <p className={styles.tutorName}>{tutors.name}</p>
+                               <p className={styles.tutorField}>{tutors.position}</p>
+                           </div>
+                           <div className={styles.ratingWrapper}>
+                               <div className={styles.ratingContainer}>
+                                   <img className={styles.ratingImg} src="./assets/tutor/rating.png"></img>
+                                   <p className={styles.rating}>{tutors.rating}</p>
+                               </div>
+                               <p className={styles.lessonCount}>{tutors.lessons_taught} lessons</p>
+                           </div>
+                       </div>    
+                       <div className={styles.tutorSkilsContainer}>
+                           <div className={styles.skillsContainer}>
+                               <p className={styles.skillTitle}>Teaches</p>
+                               <div className={styles.chipsContainer}>
+                                   <div className={styles.chips}>
+                                   </div>
+                               </div>
+                           </div>
+                       <div className={styles.skillsContainer}>
+                           <p className={styles.skillTitle}>Speaks</p>
+                           <div className={styles.chipsContainer}>
+                               <div className={styles.chips}>
+                                
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div className={styles.tutorAboutContainer}>
+                       <div className={`${styles.tabsContainer}`}>
+                           {tabList.map((tab, i) =>
+                           <div className={styles.tabTitleContainer}>
+                               <button 
+                                   key={i} 
+                                   id={tab.name} 
+                                   disabled={currentTab === `${tab.name}`} 
+                                   onClick={(handleTabClick)}
+                                   className={currentTab === tab.name ? `${styles.tabBtn} ${styles.tabBtnSelected}` : `${styles.tabBtn}`}
+                               > 
+                                   {tab.label}
+                               </button>
                             </div>
-                            {/* <img className={styles.nextIcon} src="./assets/tutor/next.png"></img> */}
+                           )}
+                       </div>
+                       <div className={styles.tabContent}>
+                           
+                                {currentTab === 'aboutMe' && <AboutMe aboutMe={tutors.about_me} />}
+                                {currentTab === 'aboutClass' && <AboutClass aboutClass={tutors.about_class} />}
+                                {currentTab === 'reviews' && <TutorReviews reviews={tutors.reviews} />}
                         </div>
                     </div>
-                    <div className={styles.skillsContainer}>
-                        <p className={styles.skillTitle}>Speaks</p>
-                        <div className={styles.chipsContainer}>
-                            {/* <img className={styles.previousIcon} src="./assets/tutor/previous.png"></img> */}
-                            <div className={styles.chips}>
-                                <Chip />
-                                <Chip />
-                            </div>
-                            {/* <img className={styles.nextIcon} src="./assets/tutor/next.png"></img> */}
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.tutorAboutContainer}>
-                    <div className={`${styles.tabsContainer}`}>
-                        {tabs.map((tab, i) =>
-                            <button 
-                                key={i} 
-                                id={tab.id} 
-                                disabled={currentTab === `${tab.id}`} 
-                                onClick={(handleTabClick)}
-                                className={currentTab === tab.id ? `${styles.tabBtn} ${styles.tabBtnSelected}` : `${styles.tabBtn}`}
-                            > 
-                                {tab.tab}
-                            </button>
-                        )}
-                    </div>
-                </div>
-            </div>
-            {/* <div className={styles.tutorBookingCard}>
-                <img className="w-75" src="./assets/signUpModal/bumper-cars.png"></img>
+                </div> 
+        </div>
+        {/*  */}
+        <div className={styles.tutorBookingCard}>
                 <Button 
                     content="book lesson"
                     buttonColor="orangeBg"
                     buttonTextColor="whiteText"
                     buttonSize="mediumBtn"
-                    buttonFontSize="smallFont"
+                    buttonFontSize="mediumFont"
                     height="mediumHeight"
                 />
-                <Button 
-                    content="contact tutor"
-                    buttonColor="grayBg"
-                    buttonTextColor="whiteText"
-                    buttonSize="mediumBtn"
-                    buttonFontSize="smallFont"
-                    height="mediumHeight"
-                />
-            </div> */}
+            </div>
         </div>
+      
     )
 }
 
