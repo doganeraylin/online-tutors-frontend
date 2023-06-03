@@ -8,9 +8,10 @@ const Header = () => {
   const router = useRouter()
   const [screenSize, setScreenSize] = useState(null); 
   const links = [
-      { href: '/about', text: 'about us', id: "0" },
-      { href: '/find-a-tutor', text: 'find a tutor', id: "1" },
-      { href: '/contact', text: 'contact', id: "2 "},
+    { href: '/', text: 'home', id: "0" },
+    { href: '/about', text: 'about us', id: "1" },
+    { href: '/find-a-tutor', text: 'find a tutor', id: "2" },
+    { href: '/contact', text: 'contact', id: "3"},
   ];
 
   useEffect(() => {
