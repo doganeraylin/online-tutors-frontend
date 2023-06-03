@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Header from "../Header/Header"
 import Button from "../Button/Button"
 import styles from "./Register.module.css"
 
@@ -22,9 +21,9 @@ const Register = () => {
                                 content="register"
                                 buttonColor="orangeBg"
                                 buttonTextColor="whiteText"
-                                buttonSize="smallBtn"
-                                buttonFontSize="smallFont"
-                                height="smallHeight"
+                                buttonSize="largeBtn"
+                                buttonFontSize="largeFont"
+                                height="largeHeight"
                             />
                         </Link>
                     </div>
