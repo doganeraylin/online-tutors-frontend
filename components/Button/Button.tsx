@@ -4,7 +4,7 @@ interface ButtonProps {
     content: string
     buttonColor: "orangeBg" | "lightYellowBg" | "grayBg"
     buttonTextColor: "whiteText" | "blueText" | "grayText" | "orangeText"
-    buttonSize: "smallBtn" | "mediumBtn" | "largeBtn" | "largestSize"
+    buttonSize: "smallBtn" | "mediumBtn" | "largeBtn" 
     buttonFontSize: "smallFont" | "mediumFont" | "largeFont"
     height: "smallHeight" | "mediumHeight" | "largeHeight"
 
