@@ -1,12 +1,12 @@
 import styles from './Chip.module.css'
 
 interface ChipProps {
-  subject: string;
+  text: string;
 }
-const Chip = ({ subject } : ChipProps) => {
+const Chip = ({ text } : ChipProps) => {
   return (
     <div className={styles.chipContainer}>
-        <p className={styles.chip}>{subject}</p>
+        <p className={styles.chip}>{text}</p>
     </div>
   )
 }
