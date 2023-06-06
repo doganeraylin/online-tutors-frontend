@@ -1,13 +1,12 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router';
 import Button from '../Button/Button'
-import { useRef, useEffect, useState} from "react"
+import { useRef, useEffect} from "react"
 import { gsap } from 'gsap';
 import { matchMedia, mediaQueries } from "../AnimationScreenSize/animationScreenSize"
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import styles from './CTA.module.css'
 gsap.registerPlugin(ScrollTrigger);
-
 
 const CTA = () => {
     const textRef = useRef(null)
@@ -23,7 +22,7 @@ const CTA = () => {
                 let ctx = gsap.context(() => {
                     gsap.to(buttonRef.current, {
                     duration: 4,
-                    scale: 1.5,
+                    scale: 1.2,
                     ease: "slow(0.7, 0.7, false)",
                     yoyo: true,
                     scrollTrigger: {
@@ -39,7 +38,7 @@ const CTA = () => {
                     ease: "power3",
                     duration: 2,
                     yoyo: true,
-                    scrub: true,
+                    
                     scrollTrigger: {
                         trigger: textRef.current,
                         start: "top 100%", 
