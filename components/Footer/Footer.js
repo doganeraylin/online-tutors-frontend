@@ -6,13 +6,12 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import styles from './Footer.module.css'
 gsap.registerPlugin(ScrollTrigger);
 
-const Footer = () => {
+const Footer = ({ showImgContainer = true}) => {
 
   const birdLeftRef = useRef(null);
   const birdRightRef = useRef(null);
 
   useEffect(() => {
-    
     matchMedia.add(mediaQueries, (context) => {
       let { isDesktop } = context.conditions;
       if (isDesktop) {
@@ -79,26 +78,29 @@ const Footer = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.imgContainer}>
-        <img ref={birdLeftRef} src="./assets/footer/bird-left.png"></img>
-        <img ref={birdRightRef} src="./assets/footer/bird-right.png"></img>
+      {showImgContainer && 
+       <div className={styles.imgContainer}>
+       <img ref={birdLeftRef} src="./assets/footer/bird-left.png"></img>
+       <img ref={birdRightRef} src="./assets/footer/bird-right.png"></img>
       </div>
+      }
       <div className={styles.navLinks}> 
+        <Link className={styles.link} href="/">home</Link>
         <Link className={styles.link} href="/about">about</Link>
         <Link className={styles.link} href="/find-a-tutor">find a tutor</Link>
         <Link className={styles.link} href="/contact">contact</Link>
       </div>
       <div>
-        <div className={styles.socialMediaContainer}>
+         <div className={styles.socialMediaContainer}>
             <p>follow us</p>
             <img src="./assets/footer/instagram.png"></img>
             <img src="./assets/footer/twitter.png"></img>
             <img src="./assets/footer/linkedin.png"></img>
-        </div>
+        </div> 
       </div>
-      {/* <div>
+       {/* <div>
           <p className={styles.backToTop}> ⇪ </p>
-      </div> */}
+      </div>  */}
     </div>
   )
 }
