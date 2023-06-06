@@ -1,0 +1,110 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.reviewsWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    font-style: italic;
+}
+.testimonialsContainer {
+    grid-column: 1 / 5;
+    grid-row: 2 / 5;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    max-width: 350px;
+    border-radius: 10px;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    padding: 1.5rem 1rem;
+    font-family: var(--josefin);
+    background-color: var(--light-yellow-text);
+}
+.reviewerName {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: normal;
+}
+.cloudCenter img {
+    max-width: 70px;
+}
+.cloudTop {
+    grid-column: 4 / 5;
+}
+.cloudTop img {
+    max-width: 130px;
+}
+.cloudBottom img {
+    max-width: 120px;
+}
+.arrow {
+    max-width: 30px;
+}
+.ratingStar {
+    max-width: 30px;
+}
+.ratingStar,
+.profileImg {
+    margin-bottom: 1rem;
+}
+.profileImg {
+    max-width: 90px;
+}
+.flyingAirplane {
+    grid-row: 4 / 6;
+    grid-column: -2 / -1;
+    /* z-index: -1; */
+}
+.flyingAirplane img {
+    max-width: 120px;
+    margin-bottom: 4rem;
+}
+
+
+@media (min-width: 768px) { 
+    .cloudTop img {
+        max-width: 280px;
+        margin-left: 5rem;
+    }
+    .cloudCenter {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+    }
+    .cloudCenter img {
+        max-width: 150px;
+    }
+    .cloudBottom img {
+        max-width: 250px;
+        margin: 1rem 0 0 5rem;
+    }
+    .flyingAirplane img {
+        max-width: 375px;
+    }
+
+}
+
+@media (min-width: 992px) { 
+    .reviewContainer {
+        max-width: 400px;
+    }
+    .cloudTop img {
+        max-width: 350px;
+        margin-left: 5rem;
+    }
+    .cloudCenter img {
+        max-width: 220px;
+    }
+    .cloudBottom img {
+        max-width: 270px;
+    }
+    .flyingAirplane img {
+        max-width: 450px;
+    }
+
+}
