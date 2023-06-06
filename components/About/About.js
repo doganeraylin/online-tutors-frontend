@@ -162,9 +162,9 @@ const About = () => {
                 </div>
             </div>
         </div>
-        <div>
+        {/* <div>
             <p className={styles.backToTop}> ⇪ </p>
-        </div>
+        </div> */}
     </div>
   )
 }
