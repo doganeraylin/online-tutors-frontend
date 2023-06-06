@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Button from '../Button/Button'
 import styles from "./TutorCard.module.css"
 
@@ -33,7 +34,7 @@ const TutorCard = ({ tutors } : TutorProps) => {
            <div className={styles.tutorCard}>
                 <div className={styles.tutorTop}>
                 <div className={styles.tutorReview}>
-                    <img className={styles.tutorImg} src="./assets/contact/sun.png"></img>
+                    <img className={styles.tutorImg} src={tutor.img}></img>
                     <div className={styles.ratingContainer}>
                         <img className={styles.ratingIcon} src="./assets/tutor/rating.png"></img>
                         <p className={styles.rating}>{tutor.rating}</p>
@@ -48,16 +49,17 @@ const TutorCard = ({ tutors } : TutorProps) => {
             </div>
             <div className={styles.tutorBottom}>
                 <p className={styles.pricing}>${tutor.hourly_rate}</p>
-                <Button 
-                        content="book"
+                <Link href={`/find-a-tutor/${tutor.id}`} >
+                    <Button 
+                        content="view details"
                         buttonColor="lightYellowBg"
                         buttonTextColor="orangeText"
                         buttonSize="smallBtn"
                         buttonFontSize="smallFont"
-                        height="smallHeight"
-                      
-            
+                        height="mediumHeight"
                     />
+                </Link>
+          
             </div>
            </div>
            
