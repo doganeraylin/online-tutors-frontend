@@ -1,10 +1,12 @@
-.container,
-.tutorBookingCard {
-    font-family: var(--josefin);
-    max-width: 350px;
+.wrapper {
+    max-width: 1200px;
     margin: 0 auto;
+}
+.tutorDetailsContainer {
+    border: 2px solid blue;
     background-color: var(--white);
     padding: 1rem;
+    margin: 1rem;
     border-radius: 25px;
 }
 .tutorHeaderContainer {
@@ -25,7 +27,9 @@
     margin: 0.5rem;
 }
 .tutorImg {
-    max-width: 75px;
+    max-width: 80px;
+    border-radius: 50%;
+    margin: 1rem 0;
 }
 .tutorName {
     font-weight: bold;
@@ -60,24 +64,29 @@
 .skillsContainer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0.3rem 0;
-    margin-top: 1rem;
+    margin: 1rem;
 }
 .skillsContainer p {
     margin: 0;
 }
-
 .skillTitle {
     opacity: 0.5;
 }
-.chips {
+.chipsContainer {
+    display: flex;
+}
+/* .chips {
     display: flex;
     justify-content: space-around;
     padding: 0 2rem;
+    border: 2px solid green;
 }
 .chips > * {
     margin: 0 0.2rem;
+    background: magenta;
+    border: 1px solid magenta;
 }
 
 .chips::before{
@@ -89,14 +98,18 @@
 .chips::before,
 .chips::after {
     color: var(--dark-gray);
-}
+} */
 .tabsContainer {
-    margin-top: 2rem;
     display: flex;
     justify-content: space-around;
 }
+.tabContent {
+    max-width: 600px;
+    margin: 0 auto;
+}
 .tabBtn {
     font-size: 1rem;
+    margin: 1rem 0;
     border: none;
     color: var(--dark-gray);
     background-color: transparent;
@@ -105,9 +118,26 @@
     border-bottom: 2px solid var(--dark-gray);
 }
 
+.ratingIcon {
+    margin: 1rem 0;
+}
+
+.singleReview {
+    margin: 1rem 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.ratingStars {
+    max-width: 30px;
+    margin: 0 0.2rem 1rem 0;
+}
+
+
+
 @media (min-width: 768px) {
     .ratingImg {
         max-width: 25px;
+        border: 1px solid green;
     }
     .rating {
         font-size: 1.75rem;
