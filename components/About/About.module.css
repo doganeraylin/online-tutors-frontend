@@ -4,6 +4,7 @@
     font-family: var(--josefin);
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 .lightYellowTitle {
     color: var(--light-yellow-title);
@@ -43,8 +44,9 @@
 
 .storyContainer,
 .summaryContainer {
+
     margin: 3rem auto;
-    max-width: 350px;
+    max-width: 450px;
     padding: 0 4rem;
     font-size: 1.25rem;
 }
@@ -54,6 +56,8 @@
     padding: 0.5rem 0;
 }
 
+
+.summaryContainer span,
 .storyContainer span {
     font-weight: bold;
 }
@@ -251,8 +255,6 @@
     text-transform: uppercase;
     margin: 5rem 0 2rem;
 }
-
-/* media queries */
 
 @media (min-width: 576px) {
     .introContainer {
