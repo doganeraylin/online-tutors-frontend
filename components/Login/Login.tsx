@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Header from "../Header/Header"
 import Button from "../Button/Button"
 import styles from "./Login.module.css"
 
