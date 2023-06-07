@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router';
 import Button from '../Button/Button'
 import { useRef, useEffect} from "react"
 import { gsap } from 'gsap';
@@ -11,9 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 const CTA = () => {
     const textRef = useRef(null)
     const buttonRef = useRef(null);
-    const router = useRouter()
-
-    const handleBtnClick = () => router.push('/register')
 
     useEffect(() => {
         matchMedia.add(mediaQueries, (context) => {
@@ -56,7 +52,7 @@ const CTA = () => {
         <div  className={styles.container}>
             <h1 ref={textRef} className={`${styles.ctaText} cta-text`}>Sign up now for your child's first lesson and get <span>50% off</span>!</h1>
             <div ref={buttonRef}>
-                <Link href="">
+                <Link href="/register">
                     <Button 
                         content="sign up"
                         buttonColor="orangeBg"
@@ -64,7 +60,6 @@ const CTA = () => {
                         buttonSize="largeBtn"
                         buttonFontSize="largeFont"
                         height="largeHeight"
-                        onClick={handleBtnClick}
                         />
                 </Link>
             </div>
