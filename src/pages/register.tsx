@@ -1,10 +1,17 @@
 import Layout from "../../components/Layout/Layout";
 import Register from "../../components/Register/Register"
 
-const register= () => 
+const register= () => {
+    return (
+        <Layout bgColor="#BAD0F6">
+            <Register/>
+        </Layout>
 
-<Layout bgColor=" #BAD0F6">
-    <Register/>
-</Layout>
+    )
+}
 
 export default register
+
+
+
+
