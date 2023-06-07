@@ -1,14 +1,14 @@
-.chip {
-    border-radius: 20px;
-    padding: 0rem 1rem;
-    margin: 0 1rem;
-    border: 1px solid var(--dark-gray);
-    color: var(--white);
-    background-color: var(--orange);
-    border: 1px solid black;
-}
-
 .chipContainer {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    width: 120px;
 }
+.chip {
+    border-radius: 20px;
+    padding: 0rem 1rem; 
+    border: 1px solid var(--dark-gray);
+    color: var(--black);
+    background-color: var(--light-gray);
+}
+
