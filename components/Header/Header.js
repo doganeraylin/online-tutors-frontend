@@ -41,7 +41,7 @@ const Header = () => {
     <nav className={`${styles.navbarContainer} navbar navbar-expand-md`}>
       <div className={`${styles.containerFluid} container-fluid`}>
           <Link href="/" legacyBehavior>
-            <img onClick={handleLogoClick} className={`${styles.navbarLogo}`}src="./assets/header/logo.png" alt="logo-img"></img>
+            <img onClick={handleLogoClick} className={`${styles.navbarLogo}`}src="/assets/header/logo.png" alt="logo-img"></img>
           </Link>
         <button className={`${styles.navbarToggler} navbar-toggler`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className={`${styles.navbarToggleIcon} navbar-toggler-icon `} ></span>
@@ -56,7 +56,7 @@ const Header = () => {
                       >
                       {link.text}
                 </Link>
-                  {index < links.length - 1 && <img className={`${styles.dotImg}`}src="./assets/header/header-dot.png"></img>}
+                  {index < links.length - 1 && <img className={`${styles.dotImg}`}src="/assets/header/header-dot.png"></img>}
               </li>
             ))}
           </ul>
