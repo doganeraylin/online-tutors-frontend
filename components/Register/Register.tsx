@@ -16,7 +16,7 @@ const Register = () => {
                     <input type="email" placeholder="email"></input>
                     <input type="password" placeholder="password"></input>
                     <div className={styles.btnContainer}>
-                        <Link href="">
+                        <Link href="/">
                             <Button 
                                 content="register"
                                 buttonColor="orangeBg"
