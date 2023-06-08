@@ -1,0 +1,35 @@
+.lightYellowTitle {
+    color: var(--light-yellow-title);
+}
+.lightYellowText {
+    color: var(--light-yellow-text);
+}
+.summaryContainer {
+    margin: 3rem auto;
+    max-width: 450px;
+    padding: 0 4rem;
+    font-size: 1.25rem;
+}
+.summaryContainer p {
+    padding: 0.5rem 0;
+}
+.summaryContainer span {
+    font-weight: bold;
+}
+.companyName {
+    color: var(--orange);
+}
+
+@media (min-width: 768px) {
+    .summaryContainer {
+        max-width: 450px;
+    }
+} 
+
+@media (min-width: 1400px) {
+    .summaryContainer p {
+        font-size: 1.75rem;
+    }
+
+}
+

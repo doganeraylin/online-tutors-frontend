@@ -1,0 +1,150 @@
+.lightYellowTitle {
+    color: var(--light-yellow-title);
+}
+.lightYellowText {
+    color: var(--light-yellow-text);
+}
+.featureTitleContainer {
+    max-width: 420px;
+    margin: 3rem auto;
+    position: relative;
+}
+.featureTitleCentered {
+    text-align: center;
+    font-size: 3.75rem;
+}
+.featureTitle,
+.featureTitleCentered {
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 1.25;
+}
+.featureDescriptionContainer {
+    max-width: 300px;
+    margin: 3rem auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.materialsContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 325px;
+    margin: 3rem auto 2rem;
+}
+.singleMaterialContainer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+.singleMaterialContainer img {
+    max-width: 65px;
+}
+.material {
+    background-color: var(--baby-pink);
+    padding: 0.75rem 4.5rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    border: 1px dashed var(--navy-blue);
+    border-style: dashed;
+    margin: 3rem 0;
+    font-weight: bold;
+}
+.gamesImg {
+    position: absolute;
+    right: 30px;
+    transform: rotate(20deg);
+}
+.quizzesImgOne {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+}
+.quizzesImgTwo {
+    position: absolute;
+    right: 20px;
+    transform: rotate(120deg);
+}
+.ebooksImg {
+    position: absolute;
+    top: 60px;
+    left: 50px;
+}
+
+
+
+@media (min-width: 768px) {
+    .featureDescriptionContainer {
+        max-width: 500px;
+        /* margin: 0 auto; */
+        font-size: 2.5rem;
+        color: var(--light-yellow);
+    }
+    .games {
+        align-self: flex-end;
+    }
+    .ebooks {
+        align-self: flex-start;
+    }
+    .gamesImg {
+        right: -10px;
+    }
+    .ebooksImg {
+        top: 60px;
+        left: 5px;
+    }
+} 
+
+@media (min-width: 992px) {
+    .featureTitleContainer {
+        max-width: 900px;
+    }
+    .featureTitleCentered {
+        font-size: 8.5rem;
+        max-width: 850px;
+    }
+    .featureDescriptionContainer {
+        max-width: 800px;
+        font-size: 3.5rem;
+        color: var(--light-yellow);
+    }
+    .materialsContainer {
+        max-width: 500px;
+    }
+    .singleMaterialContainer img {
+        max-width: 75px;
+    }
+    .quizzesImgOne {
+        left: 90px;
+        bottom: 10px;
+    }
+    .quizzesImgTwo {
+        right: 90px;
+    }
+    .material {
+        padding: 0.75rem 5.5rem;
+        font-size: 1.5rem;
+        border-radius: 50px;
+        margin: 3rem 0;
+    }
+}
+
+@media (min-width: 1400px) {
+    .featureTitleContainer {
+        max-width: 1300px;
+    }
+    .featureDescriptionContainer {
+        max-width: 1200px;
+        margin: 0 auto;
+        font-size: 6rem;
+        color: var(--light-yellow);
+    }
+    .featureTitleCentered {
+        font-size: 12rem;
+        max-width: 1200px;
+    }
+}
+
