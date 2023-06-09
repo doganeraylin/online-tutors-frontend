@@ -17,7 +17,7 @@ const ExploreTutors = () => {
                 let ctx = gsap.context(() => {
                     gsap.to(".first-star", {
                         duration: 1.5,
-                        scale: 1.3,
+                        scale: 1.2,
                         ease: "power4.out",
                         yoyo: true,
                         scrollTrigger: {
@@ -29,7 +29,7 @@ const ExploreTutors = () => {
                         });
                     gsap.to(".second-star", {
                         duration: 1.5,
-                        scale: 1.3,
+                        scale: 1.2,
                         ease: "power4.out",
                         yoyo: true,
                         scrollTrigger: {
@@ -41,7 +41,7 @@ const ExploreTutors = () => {
                         });
                         gsap.to(".third-star", {
                             duration: 1.5,
-                            scale: 1.3,
+                            scale: 1.2,
                             ease: "power4.out",
                             yoyo: true,
                             scrollTrigger: {
