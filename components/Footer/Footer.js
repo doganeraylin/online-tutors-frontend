@@ -88,7 +88,7 @@ const Footer = ({ showImgContainer = true}) => {
         <Link className={styles.link} href="/">home</Link>
         <Link className={styles.link} href="/about">about</Link>
         <Link className={styles.link} href="/find-a-tutor">find a tutor</Link>
-        <Link className={styles.link} href="/contact">contact</Link>
+        <Link className={styles.link} href="/contact-page">contact</Link>
       </div>
       <div>
          <div className={styles.socialMediaContainer}>
