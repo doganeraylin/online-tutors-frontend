@@ -1,3 +1,6 @@
+.whyContainer {
+    margin: 10rem 0;
+}
 .whyColumns {
     display: flex;
     flex-direction: column;
