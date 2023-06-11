@@ -79,12 +79,11 @@ const Account = (
                     />
                     <FormValidation formData={formData} />
                     {buttonComponent}
+                    <Link className={styles.link} href={`${href}`}>
+                        <p>{linkText}</p>
+                    </Link>
                 </form>
             </div>  
-            <Link className={styles.link} href={`${href}`}>
-                <p>{linkText}</p>
-            </Link>
-           
         </div>
     </div> 
 </>
