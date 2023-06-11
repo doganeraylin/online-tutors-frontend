@@ -98,9 +98,6 @@ const Footer = ({ showImgContainer = true}) => {
             <img src="./assets/footer/linkedin.png"></img>
         </div> 
       </div>
-       {/* <div>
-          <p className={styles.backToTop}> ⇪ </p>
-      </div>  */}
     </div>
   )
 }
