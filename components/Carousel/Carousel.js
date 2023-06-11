@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react"
 import styles from "./Carousel.module.css"
 
-
-
-
-
 const Carousel = (props) => {
     const {children} = props
     const [length, setLength] = useState(children.length)
     const [currentIndex, setCurrentIndex] = useState(0)
+
     useEffect(() => {
         setLength(children.length)
     }, [children])
@@ -18,13 +15,11 @@ const Carousel = (props) => {
             setCurrentIndex(prevState => prevState + 1)
         }
     }
-    
     const prev = () => {
         if (currentIndex > 0) {
             setCurrentIndex(prevState => prevState - 1)
         }
     }
-
 
     return (
         <div className={styles.carouselContainer}>
