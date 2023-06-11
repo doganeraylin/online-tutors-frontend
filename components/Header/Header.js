@@ -11,7 +11,7 @@ const Header = () => {
     { href: '/', text: 'home', id: "0" },
     { href: '/about', text: 'about us', id: "1" },
     { href: '/find-a-tutor', text: 'find a tutor', id: "2" },
-    { href: '/contact', text: 'contact', id: "3"},
+    { href: '/contact-page', text: 'contact', id: "3"},
   ];
 
   useEffect(() => {
