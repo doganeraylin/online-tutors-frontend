@@ -1,14 +1,16 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, ChangeEvent, ReactNode } from "react"
 import FormValidation from "../FormValidation/FormValidation";
 import styles from './Account.module.css'
-
 
 interface accountProps {
     title: string
     routerPath: string
     animationComponent: ReactNode
     buttonComponent: ReactNode
+    linkText: string
+    href: string
 } 
 
 interface FormData {
@@ -16,7 +18,13 @@ interface FormData {
     password: string;
 }
 
-const Account = ({title, routerPath, animationComponent, buttonComponent }: accountProps) => {
+const Account = (
+    {title, 
+    routerPath, 
+    animationComponent, 
+    buttonComponent, 
+    linkText,
+    href }: accountProps) => {
     const router = useRouter();
     const [formData, setFormData] = useState<FormData>({
         email: '',
@@ -73,6 +81,10 @@ const Account = ({title, routerPath, animationComponent, buttonComponent }: acco
                     {buttonComponent}
                 </form>
             </div>  
+            <Link className={styles.link} href={`${href}`}>
+                <p>{linkText}</p>
+            </Link>
+           
         </div>
     </div> 
 </>
