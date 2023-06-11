@@ -68,6 +68,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
+    .tutorsContainer {
+        margin: 5rem 0;
+    }
     .star {
         max-width: 600px;
     }
@@ -104,8 +107,9 @@
         display: flex;
         gap: 1rem;
         height: 600px;
+     
     }
-      .container {
+    .container {
         padding: 3rem 0;
     }
     .secondStar  {
