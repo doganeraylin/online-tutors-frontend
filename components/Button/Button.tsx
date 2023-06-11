@@ -7,25 +7,18 @@ interface ButtonProps {
     buttonSize: "smallBtn" | "mediumBtn" | "largeBtn" 
     buttonFontSize: "smallFont" | "mediumFont" | "largeFont"
     height: "smallHeight" | "mediumHeight" | "largeHeight"
-
-    onClick?: () => void
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
   }
   
   const Button: React.FC<ButtonProps> = 
   ({ content,
-     buttonColor, 
-     buttonTextColor, 
-     buttonSize, 
-     buttonFontSize, 
-     height, 
-     onClick }) => {
+    buttonColor, 
+    buttonTextColor, 
+    buttonSize, 
+    buttonFontSize, 
+    height
+  }) => {
 
-    const handleClick = () => {
-      if (onClick) {
-        onClick()
-      }
-    }
-  
     return (
       <button 
         className={`${styles[buttonColor]} 
@@ -34,8 +27,8 @@ interface ButtonProps {
                   ${styles[buttonFontSize]}
                   ${styles[height]}
                   ${styles.commonStyle}`}
-                  onClick={handleClick}>
-                  {content}
+                  >
+                {content}
       </button>
     )
   }
