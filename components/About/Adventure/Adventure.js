@@ -87,7 +87,7 @@ const Adventure = () => {
                     <img ref={boyImgRef} className={styles.featureBoyImg} src="./assets/about/boy.png"></img>
                 </div>
                 <div className={styles.featureDescriptionContainer}>
-                    <p className={styles.featureDescription}>We provide a <span>safe</span> and <span>comfortable</span>learning environment where your child can...</p>
+                    <p className={styles.featureDescription}>We provide a <span>safe</span> and <span> comfortable </span>learning environment where your child can...</p>
                 </div>
                 <div  ref={itemsContainerRef}  className={styles.featureDescriptionItems}>
                     <div className={`${styles.itemOne} ${styles.singleItemContainer} item-one`}>
