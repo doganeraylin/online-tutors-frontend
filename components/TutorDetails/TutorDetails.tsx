@@ -1,8 +1,5 @@
 import { useState } from "react"
-import Button from "../Button/Button"
 import Chip from "../Chip/Chip"
-import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
 import styles from "./TutorDetails.module.css"
 
 interface Review {
@@ -65,8 +62,6 @@ const [currentTab, setCurrentTab] = useState<string>('aboutMe')
     </div>
   )
 
-  
-  
   const TutorReviews = ({ reviews }: { reviews: Review[] }) => (
     <div className={styles.reviewsContainer}>
       {reviews.map((review) => 
@@ -86,7 +81,6 @@ const [currentTab, setCurrentTab] = useState<string>('aboutMe')
 
   return (
     <div className={styles.wrapper}>
-      <Header/>
       <div className={styles.container}>
             <div className={styles.tutorDetailsContainer}>
               <div className={styles.tutorHeaderContainer}>
@@ -143,30 +137,15 @@ const [currentTab, setCurrentTab] = useState<string>('aboutMe')
                     )}
                 </div>
                 <div className={styles.tabContent}>
-
-                        {currentTab === 'aboutMe' && <AboutMe aboutMe={tutors.about_me} />}
-                        {currentTab === 'aboutClass' && <AboutClass aboutClass={tutors.about_class} />}
-                        {currentTab === 'reviews' && <TutorReviews reviews={tutors.reviews} />}
+                  {currentTab === 'aboutMe' && <AboutMe aboutMe={tutors.about_me} />}
+                  {currentTab === 'aboutClass' && <AboutClass aboutClass={tutors.about_class} />}
+                  {currentTab === 'reviews' && <TutorReviews reviews={tutors.reviews} />}
                 </div>
             </div>
         </div> 
     </div>
-    {/*  */}
-        <div className={styles.tutorBookingCard}>
-            <Button 
-                content="book lesson"
-                buttonColor="orangeBg"
-                buttonTextColor="whiteText"
-                buttonSize="mediumBtn"
-                buttonFontSize="mediumFont"
-                height="mediumHeight"
-            />
-        </div>
-    </div>
-
-    // 
-
-    
+  </div>
+  
   )
 }
 
