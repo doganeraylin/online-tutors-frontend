@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useRef, useEffect} from "react"
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -8,7 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => { 
     const arrowRef = useRef(null);
-    const animationTriggerRef = useRef(null)
     useEffect(() => {
         matchMedia.add(mediaQueries, (context) => {
             let isDesktop = context.conditions?.isDesktop ?? false;
