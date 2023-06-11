@@ -1,6 +1,6 @@
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 10rem auto;
 }
 .reviewsWrapper {
     max-width: 1200px;
@@ -59,13 +59,11 @@
 .flyingAirplane {
     grid-row: 4 / 6;
     grid-column: -2 / -1;
-    /* z-index: -1; */
 }
 .flyingAirplane img {
     max-width: 120px;
     margin-bottom: 4rem;
 }
-
 
 @media (min-width: 768px) { 
     .cloudTop img {
@@ -86,7 +84,6 @@
     .flyingAirplane img {
         max-width: 375px;
     }
-
 }
 
 @media (min-width: 992px) { 
