@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,700;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
 :root {
+    --green: #3EA66B;
     --light-yellow: #FDFAD3;
     --light-yellow-title: #FFFBE0;
     --light-yellow-text: #FFFBEE;
@@ -11,7 +12,7 @@
     --sky-blue: #3EABDB;
     --white: #FFFF;
     --navy-blue: #072A59;
-    --background: #97CFC0;
+    --background: #A6E1D8;
     --orange: #FF7134;
     --dark-gray: #7B7A7A;
     --light-gray: #F4F4F4;
@@ -26,6 +27,7 @@
 html {
     height: 100%;
 }
+
 body {
     padding: 0;
     margin: 0;
@@ -33,6 +35,7 @@ body {
     font-family: var(--josefin);
     background-color: var(--background) !important;
 }
+
 .title {
     font-family: var(--shrikhand);
     color: var(--light-yellow-title);
@@ -40,8 +43,9 @@ body {
     max-width: 580px;
     margin: 0 auto;
 }
+
 .home-page-bg-transition {
-    background: linear-gradient(0deg, rgba(255,191,121,1) 0%, rgba(151,207,192,1) 100%);
+    background: linear-gradient(0deg, rgba(255,191,121,1) 0%, rgba(166,225,216,1) 100%);
 }
 
 @media (min-width: 576px) {
