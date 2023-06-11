@@ -6,7 +6,7 @@ const CTA = () => {
     return (
         <div className={`${styles.ctaTextContainer} ${styles.lightYellowTitle}`}>
             <p className={styles.ctaText}>Embark on an exciting learning adventure today!</p>
-            <div className={styles.btn}>
+            <div className={styles.btnContainer}>
                 <Link href="/register">
                     <Button 
                         content="sign up"
