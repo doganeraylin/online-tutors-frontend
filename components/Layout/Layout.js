@@ -1,11 +1,9 @@
 import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
 
-const Layout = ({ children, bgColor }) => (
-  <div style={{ backgroundColor: bgColor }}>
+const Layout = ({ children}) => (
+  <div>
     <Header />
     {children}
-    <Footer/>
   </div>
 )
 
