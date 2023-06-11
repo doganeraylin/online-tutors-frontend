@@ -1,12 +1,16 @@
 .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 .tutorDetailsContainer {
-    border: 2px solid blue;
+    max-width: 700px;
     background-color: var(--white);
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem auto;
     border-radius: 25px;
 }
 .tutorHeaderContainer {
@@ -15,21 +19,12 @@
     justify-content: space-around;
     gap: 1rem;
 }
-.tutorBookingCard {
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem 0;
-    border-radius: 50px;
-    background-color: transparent;
-}
-
 .tutorBookingCard > * {
     margin: 0.5rem;
 }
 .tutorImg {
     max-width: 80px;
     border-radius: 50%;
-    margin: 1rem 0;
 }
 .tutorName {
     font-weight: bold;
@@ -77,28 +72,6 @@
 .chipsContainer {
     display: flex;
 }
-/* .chips {
-    display: flex;
-    justify-content: space-around;
-    padding: 0 2rem;
-    border: 2px solid green;
-}
-.chips > * {
-    margin: 0 0.2rem;
-    background: magenta;
-    border: 1px solid magenta;
-}
-
-.chips::before{
-    content: "<";
-}
-.chips::after {
-    content: ">";
-}
-.chips::before,
-.chips::after {
-    color: var(--dark-gray);
-} */
 .tabsContainer {
     display: flex;
     justify-content: space-around;
@@ -117,27 +90,21 @@
 .tabBtnSelected {
     border-bottom: 2px solid var(--dark-gray);
 }
-
 .ratingIcon {
     margin: 1rem 0;
 }
-
 .singleReview {
     margin: 1rem 0;
     border-bottom: 1px solid var(--light-gray);
 }
-
 .ratingStars {
     max-width: 30px;
     margin: 0 0.2rem 1rem 0;
 }
 
-
-
 @media (min-width: 768px) {
     .ratingImg {
         max-width: 25px;
-        border: 1px solid green;
     }
     .rating {
         font-size: 1.75rem;
@@ -145,21 +112,8 @@
     .tabBtn {
         font-size: 1.25rem;
     }
-    .skillsContainer p,
     .skillsContainer p {
         font-size: 1.25rem;
     }
 }
 
-
-@media (min-width: 992px) {
-   .container {
-      padding: 3rem;
-   }
-   .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-}
-}
