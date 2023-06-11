@@ -15,6 +15,9 @@
     text-transform: uppercase;
     margin: 1rem auto;
 }
+.btnContainer {
+    margin: 3rem 0;
+}
 
 @media (min-width: 768px) {
     .ctaTextContainer {
