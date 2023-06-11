@@ -1,10 +1,27 @@
 import Layout from "../../components/Layout/Layout";
-import Register from "../../components/Register/Register"
+import Account from "../../components/Account/Account"
+import Button from "../../components/Button/Button";
+import AstronautAnimation from "../../components/AstronautAnimation/AstronautAnimation";
 
 const register= () => {
     return (
-        <Layout bgColor="#BAD0F6">
-            <Register/>
+        <Layout>
+            <Account
+                title="Create an account"
+                routerPath="/success"
+                animationComponent={
+                    <AstronautAnimation 
+                        imgProp="/assets/register/astronaut.png"/>
+                    }
+                buttonComponent={
+                <Button content="Register"
+                    buttonColor="orangeBg"
+                    buttonTextColor="whiteText"
+                    buttonSize="largeBtn"
+                    buttonFontSize="largeFont"
+                    height="largeHeight"/>
+                }
+            />
         </Layout>
 
     )
