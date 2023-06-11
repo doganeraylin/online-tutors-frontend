@@ -36,13 +36,13 @@ const AstronautAnimation = ({imgProp} : imgProps) => {
             }
         })
     }, []);
+    
     return (
         <img 
             ref={imgRef} 
             src={imgProp}
             className={styles.img}   
-        >
-            
+        > 
         </img>
     )
 }
