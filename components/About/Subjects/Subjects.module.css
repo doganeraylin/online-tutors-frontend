@@ -85,7 +85,11 @@
     bottom: 0px;
     left: 50px;
 } 
-
+.mathImg {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
 
 
 @media (min-width: 768px) {
