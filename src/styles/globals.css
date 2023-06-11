@@ -12,8 +12,7 @@
     --sky-blue: #3EABDB;
     --white: #FFFF;
     --navy-blue: #072A59;
-    --home-pg-bg: #A6E1D8;
-    --about-pg-bg: #BAD0F6;
+    --background: #A6E1D8;
     --orange: #FF7134;
     --dark-gray: #7B7A7A;
     --light-gray: #F4F4F4;
@@ -34,7 +33,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: var(--josefin);
-    background-color: var(--about-pg-bg);
+    background-color: var(--background);
 }
 
 .title {
