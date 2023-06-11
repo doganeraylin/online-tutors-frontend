@@ -10,7 +10,11 @@
     padding: 1rem;
     text-align: center;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
+
+
 .titleItalic {
     font-weight: bold;
     font-style: italic;
@@ -43,29 +47,6 @@
     color: var(--orange);
 }
 
-/* animation */
-.titleActive {
-    width: 15ch;
-    margin: 0 auto;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-}
-
-
-
-@keyframes typing {
-    from {
-      width: 0;
-    }
-  }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
 
 @media (min-width: 576px) {
     .introContainer {
