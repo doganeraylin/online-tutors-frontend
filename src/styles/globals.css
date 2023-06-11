@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,700;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap');
 :root {
-    --green: #3EA66B;
     --light-yellow: #FDFAD3;
     --light-yellow-title: #FFFBE0;
     --light-yellow-text: #FFFBEE;
@@ -32,7 +31,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: var(--josefin);
-    background-color: var(--background);
+    background-color: var(--background) !important;
 }
 .title {
     font-family: var(--shrikhand);
@@ -42,7 +41,7 @@ body {
     margin: 0 auto;
 }
 .home-page-bg-transition {
-    background: linear-gradient(0deg, rgba(255,191,121,1) 0%, rgba(166,225,216,1) 100%);
+    background: linear-gradient(0deg, rgba(255,191,121,1) 0%, rgba(151,207,192,1) 100%);
 }
 
 @media (min-width: 576px) {
