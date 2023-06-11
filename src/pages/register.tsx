@@ -9,6 +9,8 @@ const register= () => {
             <Account
                 title="Create an account"
                 routerPath="/success"
+                linkText="Already have an account? Login now!"
+                href="/login"
                 animationComponent={
                     <AstronautAnimation 
                         imgProp="/assets/register/astronaut.png"/>
@@ -23,7 +25,6 @@ const register= () => {
                 }
             />
         </Layout>
-
     )
 }
 
