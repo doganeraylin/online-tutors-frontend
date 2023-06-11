@@ -26,7 +26,6 @@ const Checkout = () => {
                     </div>
                 </div>
             </div>
-
             <div className={styles.summary}>
                 <div className={styles.lessonDetailsContainer}>
                     <img className={styles.tutorImg} src="./assets/contact/sun.png"></img>

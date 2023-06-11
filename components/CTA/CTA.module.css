@@ -1,11 +1,10 @@
 .container {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 10rem auto;
     font-family: var(--josefin);
     color: var(--light-yellow-title);
     text-align: center;
 }
-
 .ctaText {
     max-width: 350px;
     margin: 0 auto;
@@ -16,7 +15,6 @@
     color: var(--orange);
     font-weight: bold;
 }
-
 
 @media (min-width: 576px) {
     .ctaText {

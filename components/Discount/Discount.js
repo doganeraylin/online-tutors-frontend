@@ -3,13 +3,10 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { matchMedia, mediaQueries } from "../AnimationScreenSize/animationScreenSize"
 import styles from './Discount.module.css'
-
 gsap.registerPlugin(ScrollTrigger);
-
 
 const Discount = () => {
     const textRef = useRef(null);
-    const animationTriggerRef = useRef(null)
     useEffect(() => {
         matchMedia.add(mediaQueries, (context) => {
             let isDesktop = context.conditions?.isDesktop ?? false;
@@ -21,8 +18,6 @@ const Discount = () => {
                         y: -120,
                         scale: (1.2),
                         ease: "sine.out",
-                        // repeat: -1,
-                        // yoyo: true,
                         scrollTrigger: {
                             trigger: textRef.current,
                             start: "bottom 90%",
@@ -36,17 +31,14 @@ const Discount = () => {
         })
     }, []); 
         
-
     return (
         <div className={styles.container}>
             <div ref={textRef} className={styles.content}>
                 <h1 className={styles.discountText}>50% OFF</h1>
                 <img  r src="./assets/discount/plane.png" className={styles.discountImg}></img>
             </div>
-    
         </div>
     )
 }
-
 
 export default Discount
