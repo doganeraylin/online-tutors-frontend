@@ -2,7 +2,8 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding: 4rem 1rem;
+    padding: 4rem 0;
+    margin: 8rem 0;
 }
 .discountText {
     font-family: var(--spray);
@@ -12,20 +13,23 @@
 }
 .discountImg {
     max-width: 120px;
-    margin-bottom: 1rem;
+    margin-bottom: 6rem;
 }
 .discountText,
 .discountImg {
     transform: rotate(-15deg);
 }
-
+.content {
+    display: flex;
+    align-items: center;
+}
 @media (min-width: 576px) {
     .discountText {
         font-size: 5rem;
     }
     .discountImg {
         max-width: 150px;
-        margin-bottom: 2.75rem;
+        margin-bottom: 9rem;
     }
 }
 @media (min-width: 768px) {
@@ -34,33 +38,32 @@
     }
     .discountImg {
         max-width: 230px;
-        margin-bottom: 2.75rem;
+        margin-bottom: 13rem;
     }
 }
-@media (min-width: 992px) {
+
+@media (min-width: 1080px) {
+    .container {
+        overflow: hidden;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 10rem 0;
+    }
+    .discountText {
+        font-size: 5rem;
+        margin-top: 10rem;
+    }
+    .discountImg {
+        margin: 0;
+        max-width: 250px;
+    }
+}
+@media (min-width: 1200px) {
     .discountText {
         font-size: 8rem;
     }
     .discountImg {
         max-width: 350px;
-        margin-bottom: 2.75rem;
-    }
-}
-@media (min-width: 1200px) {
-    .discountText {
-        font-size: 9.5rem;
-    }
-    .discountImg {
-        max-width: 450px;
-        margin-bottom: 2.75rem;
-    }
-}
-@media (min-width: 1400px) {
-    .discountText {
-        font-size: 11rem;
-    }
-    .discountImg {
-        max-width: 500px;
-        margin-bottom: 2.75rem;
+        margin-bottom: 5rem;
     }
 }
