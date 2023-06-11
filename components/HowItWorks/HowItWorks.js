@@ -23,7 +23,6 @@ const HowItWorks = () => {
                             scrub: true,
                         }
                     });
-            
                     gsap.from(".single-step-two", {
                         x: -50,
                         opacity: 0,
@@ -34,7 +33,6 @@ const HowItWorks = () => {
                             scrub: true,
                         }
                     });
-                    
                     gsap.from(".single-step-three", {
                         x: -50,
                         opacity: 0,

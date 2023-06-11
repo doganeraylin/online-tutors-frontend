@@ -72,28 +72,27 @@ const Reviews = ({ testimonials }: ReviewsProps) => {
     }, []); 
     return (
         <div className={styles.container}> 
-        <div className={styles.containerTitle}>
-            <h1 ref={topCloudTrigger} className="title">Real People, Real Stories</h1>
-        </div>
-        <div className={styles.reviewsWrapper}>
-            <div ref={topCloudRef} className={`${styles.cloudTop} ${styles.gridContainer} cloud-top`}>
-                <img  src="./assets/reviews/cloud.png"></img>
+            <div className={styles.containerTitle}>
+                <h1 ref={topCloudTrigger} className="title">Real People, Real Stories</h1>
             </div>
-            <div className={`${styles.testimonialsContainer} ${styles.gridContainer}`}>
-                <TestimonialsSlider testimonials={testimonials} />
+            <div className={styles.reviewsWrapper}>
+                <div ref={topCloudRef} className={`${styles.cloudTop} ${styles.gridContainer} cloud-top`}>
+                    <img  src="./assets/reviews/cloud.png"></img>
+                </div>
+                <div className={`${styles.testimonialsContainer} ${styles.gridContainer}`}>
+                    <TestimonialsSlider testimonials={testimonials} />
+                </div>
+                <div ref={centerCloudRef} className={`${styles.cloudCenter} ${styles.gridContainer}`}>
+                    <img src="./assets/reviews/cloud.png"></img>
+                </div>
+                <div ref={bottomCloudTrigger} className={`${styles.flyingAirplane} ${styles.gridContainer}`}>
+                    <img src="./assets/reviews/flying-airplane.png"></img>
+                </div>
+                <div ref={bottomCloudRef} className={`${styles.cloudBottom} ${styles.gridContainer}`}>
+                    <img src="./assets/reviews/cloud.png"></img>
+                </div>
             </div>
-            <div ref={centerCloudRef} className={`${styles.cloudCenter} ${styles.gridContainer}`}>
-                <img src="./assets/reviews/cloud.png"></img>
-            </div>
-            <div ref={bottomCloudTrigger} className={`${styles.flyingAirplane} ${styles.gridContainer}`}>
-                <img src="./assets/reviews/flying-airplane.png"></img>
-            </div>
-            <div ref={bottomCloudRef} className={`${styles.cloudBottom} ${styles.gridContainer}`}>
-                <img src="./assets/reviews/cloud.png"></img>
-            </div>
-        </div>
-    </div>
-           
+        </div>       
     )
 }
 

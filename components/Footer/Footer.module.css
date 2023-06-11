@@ -15,17 +15,14 @@
     padding: 1rem 0;
     border-bottom: 1px solid var(--light-gray);
 }
-
 .link {
     text-decoration: none;
     color: var(--white);
 }
-
 .link:hover {
     color: var(--orange);
     scale: 1.2;
 }
-
 .socialMediaContainer {
     display: flex;
     justify-content: center;
@@ -34,7 +31,6 @@
     margin: 1rem auto;
     padding: 1rem 0;
 }
-
 .socialMediaContainer p {
     margin: 0 1rem;
 }
@@ -46,12 +42,10 @@
     max-width: 700px;
     margin: 0 auto;
 }
-
 .imgContainer img {
     max-width: 50px;
     margin: 1rem;
 }
-
 
 @media (min-width: 576px) {
     .navLinks {

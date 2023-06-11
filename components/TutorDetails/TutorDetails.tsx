@@ -22,14 +22,14 @@ interface Tutor {
   about_class: string,
   reviews: Review[]
 }
+
 interface TutorProps {
   tutors: Tutor;
 }
 
 const TutorReview = ( {tutors} : TutorProps) => {
 
-const [currentTab, setCurrentTab] = useState<string>('aboutMe')
-
+  const [currentTab, setCurrentTab] = useState<string>('aboutMe')
   const tabList = [
     {
       name: 'aboutMe',
@@ -44,8 +44,7 @@ const [currentTab, setCurrentTab] = useState<string>('aboutMe')
       label: 'Reviews',
     },
   ];
-  
-
+    
   const handleTabClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const tabId = e.currentTarget.id 
     setCurrentTab(tabId)
@@ -55,7 +54,6 @@ const [currentTab, setCurrentTab] = useState<string>('aboutMe')
       <p>{aboutMe}</p>
     </div>
   )
-  
   const AboutClass = ({ aboutClass }: { aboutClass: string }) => (
     <div>
       <p>{aboutClass}</p>
@@ -73,7 +71,6 @@ const [currentTab, setCurrentTab] = useState<string>('aboutMe')
           ))}
         </div>
           <p>{review.review}</p>
-     
         </div>
       )}
     </div>

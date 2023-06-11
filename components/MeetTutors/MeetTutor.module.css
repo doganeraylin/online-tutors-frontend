@@ -1,11 +1,10 @@
 .container {
     position: relative;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 8rem auto;
     padding: 4rem 0;
     display: flex;
     justify-content: center;
-    border: 1px solid magenta;
     font-family: var(--josefin);
     font-size: 3.5rem;
 }
@@ -45,7 +44,6 @@
     position: absolute;
     top: 10px;
     left: 0;
-    z-index: -1;
 }
 .blueBorderCloud {
     max-width: 200px;
@@ -54,7 +52,6 @@
     position: absolute;
     right: 10px;
     bottom: 60px;
-    z-index: -1;
     transform: rotate(-5deg);
 }
 .bottomCloud {
@@ -63,7 +60,6 @@
 
 @media (min-width: 768px) {
     .container {
-        border: 1px solid green;
         display: block;
         font-size: 4.5rem;
     }
@@ -94,7 +90,6 @@
 
 @media (min-width: 768px) {
     .container {
-        border: 1px solid green;
         display: block;
         font-size: 4.5rem;
     }

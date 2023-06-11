@@ -37,9 +37,6 @@
     color: var(--orange);
     scale: 1.2;
 }
-
-
-
 .dotImg {
     display: none;
     max-width: 5px;
