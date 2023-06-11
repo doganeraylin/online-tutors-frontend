@@ -1,12 +1,13 @@
+import Layout from "../../../components/Layout/Layout"
 import { getTutors } from '../../../lib/tutors'
 import { getTutorById } from '../../../lib/tutors'
 import TutorDetails from "../../../components/TutorDetails/TutorDetails"
 
 export default function Tutor({ tutor }) {
   return (
-    <div>
-      <TutorDetails tutors={tutor}></TutorDetails>
-    </div>
+  <Layout>
+    <TutorDetails tutors={tutor}></TutorDetails>
+  </Layout>
   );
 }
 
