@@ -12,7 +12,7 @@
     --sky-blue: #3EABDB;
     --white: #FFFF;
     --navy-blue: #072A59;
-    --background: #A6E1D8;
+    --background: #97CFC0;
     --orange: #FF7134;
     --dark-gray: #7B7A7A;
     --light-gray: #F4F4F4;
@@ -27,7 +27,6 @@
 html {
     height: 100%;
 }
-
 body {
     padding: 0;
     margin: 0;
@@ -35,7 +34,6 @@ body {
     font-family: var(--josefin);
     background-color: var(--background);
 }
-
 .title {
     font-family: var(--shrikhand);
     color: var(--light-yellow-title);
@@ -43,7 +41,6 @@ body {
     max-width: 580px;
     margin: 0 auto;
 }
-
 .home-page-bg-transition {
     background: linear-gradient(0deg, rgba(255,191,121,1) 0%, rgba(166,225,216,1) 100%);
 }
