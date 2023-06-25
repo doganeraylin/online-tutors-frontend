@@ -8,10 +8,14 @@
    color: var(--light-yellow-title);
    font-family: var(--shrikhand);
    border: 1px solid black;
+   text-align: center;
 }
 .heroTextSubtitle {
    /* margin: 1rem 0; */
    border: 1px solid black;
+}
+.heroTextSubtitle span{
+   color: var(--orange);
 }
 .heroTextDescription {
    font-size: 1.25rem;
@@ -49,7 +53,7 @@
    }
    .heroImg {
       border: 2px solid salmon;
-      display: block;
+      /* display: block; */
       max-width: 100%;
       margin: 0 auto;
    }
