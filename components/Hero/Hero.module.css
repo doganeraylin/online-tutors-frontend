@@ -7,11 +7,9 @@
    font-size: 2.5rem;
    color: var(--light-yellow-title);
    font-family: var(--shrikhand);
-   border: 1px solid black;
    text-align: center;
 }
 .heroTextSubtitle {
-   /* margin: 1rem 0; */
    border: 1px solid black;
 }
 .heroTextSubtitle span{
@@ -20,18 +18,13 @@
 .heroTextDescription {
    font-size: 1.25rem;
    font-weight: 200;
-   border: 1px solid black;
 }
 .heroTextDescription span {
    font-weight: bold;
 }
-.heroImg {
-   /* max-width: 100%; */
-   display: none;
-}
 .arrowContainer img {
    max-width: 45px;
-   /* margin: 1rem 0 2rem; */
+
 }
 
 @media (min-width: 768px) {
@@ -45,29 +38,17 @@
 
 @media (min-width: 1024px) {
    .container {
-      border: 2px solid yellow;
       display: flex;
       justify-content: space-around;
       align-items: center;
       gap: 5rem;
    }
-   .heroImg {
-      border: 2px solid salmon;
-      /* display: block; */
-      max-width: 100%;
-      margin: 0 auto;
-   }
    .heroTextContainer {
-      border: 2px solid blue;
       padding: 0 2rem;
       max-width: 50%;
    }
    .heroTextTitle {
       font-size: 4.5rem;
-      border: 1px solid black;
-   }
-   .heroTextSubtitle {
-      border: 1px solid black;
    }
    .arrowContainer img {
       max-width: 60px;
