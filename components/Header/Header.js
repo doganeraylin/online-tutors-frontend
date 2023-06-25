@@ -70,7 +70,7 @@ const Header = () => {
             buttonColor="orangeBg"
             buttonTextColor="whiteText"
             buttonSize="largeBtn"
-            buttonFontSize="lagerFont"
+            buttonFontSize="largeFont"
             height="largeHeight"
 
           />
