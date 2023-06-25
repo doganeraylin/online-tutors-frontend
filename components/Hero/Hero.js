@@ -35,14 +35,14 @@ const Hero = () => {
             <div className={styles.heroTextContainer}>
                 <h1 className={styles.heroTextTitle}>Playful Learning Adventures</h1>
                 <h2 className={styles.heroTextSubtitle}>Transform your child's learning experience with <span>Playful Minds!</span></h2>
-                <p className={styles.heroTextDescription}>Unlock your child's full potential with our <span>fun</span> and  <span>engaging</span> online tutoring program. Our <span>expert tutors</span> provide personalized <span>one-on-one sessions</span> that cater to your child's <span>unique learning style</span>. Sign up today and watch your child's mind soar!</p>
+                <p className={styles.heroTextDescription}>Unlock your child's full potential with our <span>fun</span> and  <span>engaging</span> online tutoring program. Sign up today and watch your child's mind soar!</p>
                 <div className={styles.arrowContainer}>
-                    <img ref={arrowRef} src="/assets/hero/1.png"></img>
+                    <img ref={arrowRef} className={styles.arrowIcon} src="/assets/hero/1.png"></img>
                 </div>
             </div>
-            {/* <div className={styles.heroImgContainer}>
+            <div className={styles.heroImgContainer}>
                 <img className={styles.heroImg} src="./assets/hero/hero-img.png"></img>
-            </div> */}
+            </div>
         </div>  
     )   
 }
