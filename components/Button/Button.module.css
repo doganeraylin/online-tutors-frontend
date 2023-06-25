@@ -73,3 +73,17 @@
     height: 45px;
     line-height: 45px;
 }
+
+
+@media (min-width: 1800px) {
+    .largeBtn {
+        padding: 0 3.5rem;
+    }
+    .largeFont {
+        font-size: 1.75rem;
+    }
+    .largeHeight {
+        height: 60px;
+        line-height: 60px;
+    }
+}
