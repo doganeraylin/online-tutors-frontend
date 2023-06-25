@@ -56,7 +56,10 @@ const Header = () => {
                       >
                       {link.text}
                 </Link>
-                  {index < links.length - 1 && <img className={`${styles.dotImg}`}src="/assets/header/header-dot.png"></img>}
+                  {/* {index < links.length - 1 && 
+                  <div className={styles.dotImgContainer}>
+                    <img className={`${styles.dotImg}`}src="/assets/header/header-dot.png"></img>
+                  </div>} */}
               </li>
             ))}
           </ul>
@@ -66,9 +69,10 @@ const Header = () => {
             content="login"
             buttonColor="orangeBg"
             buttonTextColor="whiteText"
-            buttonSize="mediumBtn"
-            buttonFontSize="mediumFont"
-            height="mediumHeight"
+            buttonSize="largeBtn"
+            buttonFontSize="lagerFont"
+            height="largeHeight"
+
           />
         </div>
       </div>
