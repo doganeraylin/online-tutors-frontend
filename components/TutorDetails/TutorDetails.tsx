@@ -101,7 +101,6 @@ const TutorReview = ( {tutors} : TutorProps) => {
                         {tutors.subjects.map((subject, index) => (
                           <Chip key={index} text={subject}/>
                         ))}
-                          <div className={styles.nextIcon}></div>
                       </div>
                   </div>
               <div className={styles.skillsContainer}>
