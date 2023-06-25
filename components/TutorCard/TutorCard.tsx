@@ -16,7 +16,17 @@ interface Tutor {
     bio: string,
     rating: number,
     lessons_taught: number,
-    hourly_rate: number,
+    pricing: {
+        arcade: {
+            price: number
+        },
+        turbo: {
+            price: number
+        },
+        divin: {
+            price: number
+        }
+    }
     subjects: [], 
     about_me: string,
     about_class: string,
@@ -48,7 +58,7 @@ const TutorCard = ({ tutors } : TutorProps ) => {
                         </div>
                     </div>
                     <div className={styles.tutorBottom}>
-                        <p className={styles.pricing}>${tutor.hourly_rate}</p>
+                        {/* <p className={styles.pricing}>starting from ${tutor.pricing.arcade.price}</p> */}
                         <Link href={`/find-a-tutor/${tutor.id}`} >
                             <Button 
                                 content="view details"
