@@ -114,4 +114,8 @@
     .planet {
         max-width: 230px;
     }
+    .contactInfoContainer,
+    .socialMediaText {
+        font-size: 1.25rem;
+    }
 }
