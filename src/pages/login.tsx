@@ -9,7 +9,7 @@ const login = () =>
     <Account
         title="Login"
         routerPath="/"
-        linkText="Are you new here? Register now!"
+        linkText="New here? Register now!"
         href="/register"
         animationComponent={<AstronautAnimation imgProp="/assets/login/astronaut-2.png"/>}
         buttonComponent={
