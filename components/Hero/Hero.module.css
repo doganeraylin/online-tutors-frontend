@@ -2,13 +2,13 @@
    margin: 2rem 0;
    padding: 1rem 1.5rem;
 }
-
 .heroTextContainer {
    margin: 2rem 0;
    color: var(--light-yellow-text);
 }
 .heroTextContainer > *  {
    margin: 1rem 0;
+   max-width: 80%;
 }
 .heroTextTitle {
    font-size: clamp(3.5rem, 10vw, 5rem);
