@@ -26,6 +26,10 @@
     text-align: center;
     font-size: 1.5rem;
 }
+
+.featureDescriptionContainer > * {
+    margin: 8rem 0;
+}
 .featureDescription span {
     font-weight: bold;
 }
