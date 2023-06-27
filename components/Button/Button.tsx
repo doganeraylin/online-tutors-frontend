@@ -7,6 +7,7 @@ interface ButtonProps {
     buttonSize: "smallBtn" | "mediumBtn" | "largeBtn" 
     buttonFontSize: "smallFont" | "mediumFont" | "largeFont"
     height: "smallHeight" | "mediumHeight" | "largeHeight"
+    textTransform: "uppercase"  | "lowercase"
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
   }
   
@@ -16,7 +17,8 @@ interface ButtonProps {
     buttonTextColor, 
     buttonSize, 
     buttonFontSize, 
-    height
+    height,
+    textTransform
   }) => {
 
     return (
@@ -26,6 +28,7 @@ interface ButtonProps {
                   ${styles[buttonSize]} 
                   ${styles[buttonFontSize]}
                   ${styles[height]}
+                  ${styles[textTransform]}
                   ${styles.commonStyle}`}
                   >
                 {content}
