@@ -58,15 +58,16 @@ const TutorCard = ({ tutors } : TutorProps ) => {
                         </div>
                     </div>
                     <div className={styles.tutorBottom}>
-                        {/* <p className={styles.pricing}>starting from ${tutor.pricing.arcade.price}</p> */}
+                        <p className={styles.pricing}><span>starting from</span> ${tutor.pricing.arcade.price}</p>
                         <Link href={`/find-a-tutor/${tutor.id}`} >
                             <Button 
-                                content="view details"
+                                content="details"
                                 buttonColor="lightYellowBg"
                                 buttonTextColor="orangeText"
                                 buttonSize="smallBtn"
                                 buttonFontSize="smallFont"
                                 height="mediumHeight"
+                                textTransform="lowercase"
                             />
                         </Link>
                     </div>
